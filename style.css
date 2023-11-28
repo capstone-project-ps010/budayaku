@@ -200,8 +200,8 @@ p.text-pulau {
 .overlay-pulau {
     position: absolute;
     border-radius: 1.25rem;
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.35) 67.08%, #000 100%);
 }
 
@@ -297,19 +297,33 @@ ul.splide__pagination {
 
 li.splide__slide img {
     border-radius: 20px;
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
+}
+
+ul.splide__list {
+    margin: 1rem !important;
 }
 
 .text-pulau__item {
     position: relative;
     z-index: 1;
     margin-top: -2rem;
-    margin-left: 5.5rem;
     color: #fff;
+    text-align: center;
+}
+
+img.image-suku {
+    width: 40rem;
+}
+
+p.text-suku {
+    margin-top: 2rem;
+    margin-right: 34rem;
+    color: #0D3B66;
 }
 
 footer {
