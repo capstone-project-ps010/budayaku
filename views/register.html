@@ -18,31 +18,49 @@
     <title>BudayaKu</title>
   </head>
   <body>
-    <div class="container-register">
+    <div class="container-register body-register">
       <div class="overlay-register"></div>
       <img
         src="https://s3-alpha-sig.figma.com/img/4e1b/275c/9b455c774d660fb6f7a4155c6a99e431?Expires=1702252800&Signature=kNIGXXiLTMjD4gN3sFLci97dTtf-pg8zYEwDnyMBNhc~k1FOrFrR8tRKg67qtOgfXIMtsIRyTG7GpZ9f8se39vww9hWPE42BN~X8SODOf8-KRR50aQ7jJm8K5Dh5drWKMwUQ7mxceCQvBVUU5DB25zo2aiI97L-jX0affGJuL2zWmVmDQ9lWFDpUjdI6g~bnOdPHD8OxbuBZY6U~IqIoPK08nFOtI6U9b~EK7moTKzLfJ-RlbnUvY5EksUxmXgUwt8YQ36YawxfOJvS59yJ9XR1TwHzkv5rAOxZUUYEgCeyO2zaQFzVzIHjpJIRwjkCDzk9oviUPM92FCRUPJvcDbw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
         alt="" />
       <div class="register-item">
         <h1>Register to BudayaKu</h1>
-        <form>
+        <form method="POST">
           <div class="mb-3">
             <label for="name" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="name" />
+            <input type="text" name="name" class="form-control" id="name" />
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" />
+            <input type="email" name="email" class="form-control" id="email" />
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" />
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              id="password" />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Confirm Password</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              id="password" />
           </div>
           <div class="mb-3">
             <button type="submit" class="login-register__submit">
               Register
             </button>
           </div>
+          <p>
+            Sudah punya Akun?
+            <a class="login-register__now" href="./login.html"
+              >Masuk Sekarang</a
+            >
+          </p>
         </form>
       </div>
     </div>

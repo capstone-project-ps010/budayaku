@@ -21,13 +21,14 @@
     <div class="container-login">
       <h1>Log In to BudayaKu</h1>
       <div class="login-item">
-        <form>
+        <form method="POST">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"
               >Email address</label
             >
             <input
               type="email"
+              name="email"
               class="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
@@ -39,6 +40,7 @@
             >
             <input
               type="password"
+              name="password"
               class="form-control"
               id="exampleInputPassword1"
               required />
@@ -48,7 +50,9 @@
           </div>
           <p>
             Belum punya Akun?
-            <a class="register-now" href="./register.html">Daftar Sekarang</a>
+            <a class="login-register__now" href="./register.html"
+              >Daftar Sekarang</a
+            >
           </p>
         </form>
         <div class="login-line"></div>
