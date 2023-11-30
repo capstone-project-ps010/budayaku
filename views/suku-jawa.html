@@ -107,12 +107,12 @@
         </article>
         <article>
           <h3>Adat Istiadat</h3>
-          <section class="splide" aria-label="Placeholder Example">
+          <section class="splide" aria-label="Placeholder Example" id="splide1">
             <ul class="splide__pagination"></ul>
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <a href="./suku-jawa.html">
+                  <a href="#">
                     <div class="overlay-pulau"></div>
                     <img
                       src="https://s3-alpha-sig.figma.com/img/314f/1a8a/de4ba34825666539aa7e4a89da495198?Expires=1701648000&Signature=nGTUCpEhcO103fvH~u5DGleDg460tmSttuxvvBgulb4DNvksoL3HyPhqesEF9QefdmXjTAsTrpSiiTTEq6zpmixA1W3Y3qoTUjeM6cA8YIavitAd6ce8WPe2IWKB5UvNIgD1E4ab2BFKbkvZwBTzhvqS7dQCB4CzLh5jrbYfLOcg-PuCW3DNcAZcpWqUTcEsOj1fFw7IW1uxRpYjbDv3hfQTXGnp3y315GrlxYUwOvWbk1SqI1i5cq62nwQd15FXaQ14zWu32ek6tZnwGxxAcJb~pIRB5SEmue~1H-KeFFrYgJaldZWpcKL~Oqt78zJe0mUJGPzAEnBs-uxqZNGNVg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -146,15 +146,12 @@
         </article>
         <article>
           <h3>Adat Istiadat</h3>
-          <section
-            class="splide2"
-            id="slider1"
-            aria-label="Placeholder Example">
+          <section class="splide" id="slider2" aria-label="Placeholder Example">
             <ul class="splide__pagination"></ul>
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <a href="./suku-jawa.html">
+                  <a href="#">
                     <div class="overlay-pulau"></div>
                     <img
                       src="https://s3-alpha-sig.figma.com/img/314f/1a8a/de4ba34825666539aa7e4a89da495198?Expires=1701648000&Signature=nGTUCpEhcO103fvH~u5DGleDg460tmSttuxvvBgulb4DNvksoL3HyPhqesEF9QefdmXjTAsTrpSiiTTEq6zpmixA1W3Y3qoTUjeM6cA8YIavitAd6ce8WPe2IWKB5UvNIgD1E4ab2BFKbkvZwBTzhvqS7dQCB4CzLh5jrbYfLOcg-PuCW3DNcAZcpWqUTcEsOj1fFw7IW1uxRpYjbDv3hfQTXGnp3y315GrlxYUwOvWbk1SqI1i5cq62nwQd15FXaQ14zWu32ek6tZnwGxxAcJb~pIRB5SEmue~1H-KeFFrYgJaldZWpcKL~Oqt78zJe0mUJGPzAEnBs-uxqZNGNVg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -200,7 +197,7 @@
         </div>
         <div class="footer-pulau">
           <h4>Pulau</h4>
-          <a href="#">Pulau Jawa</a>
+          <a href="../views/pulau-jawa.html">Pulau Jawa</a>
           <a href="#">Pulau Kalimantan</a>
           <a href="#">Pulau Sumatera</a>
           <a href="#">Pulau Sulawesi</a>
@@ -224,19 +221,15 @@
     </div>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        var splide = new Splide('.splide', {
-          autoWidth: true,
-          perPage: 7,
-          focus: 0,
-        });
+        var elms = document.getElementsByClassName('splide');
 
-        splide.mount();
-
-        new Splide('#slider1').mount();
-
-        new Splide('#slider2').mount();
-
-        new Splide('#slider3').mount();
+        for (var i = 0; i < elms.length; i++) {
+          new Splide(elms[i], {
+            autoWidth: true,
+            perPage: 7,
+            focus: 0,
+          }).mount();
+        }
       });
     </script>
   </body>

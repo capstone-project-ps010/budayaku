@@ -73,6 +73,10 @@ header {
     box-shadow: -1px 1px 10px;
 }
 
+.dropdown-item:active {
+    background-color: #F4D35E !important;
+}
+
 ul {
     font-weight: 400;
     margin-bottom: 0 !important;
@@ -123,10 +127,42 @@ button.carousel-control-prev, .carousel-control-next {
     border-radius: 50%;
 }
 
+#carouselImage button.carousel-control-prev, #carouselImage .carousel-control-next {
+    height: 18%;
+    background-color: #0D3B66 !important;
+    border-radius: 50%;
+}
+
+#carouselImage .carousel-inner {
+    width: unset !important;
+}
+
+#carouselImage .carousel-item-start {
+    display: flex;
+    justify-content: center;
+}
+
+#carouselImage .carousel-item-end {
+    display: flex;
+    justify-content: center;
+}
+
+#carouselImage .carousel-control-prev, #carouselImage .carousel-control-next {
+    top: 120px !important;
+}
+
 .carousel-control-prev, .carousel-control-next {
     top: 280px !important;
     bottom: 280px !important;
     width: 3.5rem !important;
+}
+
+#carouselImage .carousel-control-prev {
+    left: 15% !important;
+}
+
+#carouselImage .carousel-control-next {
+    right: 15% !important;
 }
 
 .carousel-control-prev {
@@ -171,7 +207,8 @@ article h3 {
 }
 
 img.image-pulau {
-    width: 40rem;
+    width: 30rem;
+    height: 20rem;
 }
 
 p.text-pulau {
