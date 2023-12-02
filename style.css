@@ -42,6 +42,18 @@ h4 {
     width: 120px;
 }
 
+.navbar-collapse {
+    justify-content: space-between;
+}
+
+.collapse.header {
+    flex-direction: row !important;
+}
+
+.navbar {
+    padding-block: 0 !important;
+}
+
 form svg {
     position: absolute;
     bottom: 18px;
@@ -337,6 +349,7 @@ p.text-pulau {
 
 section.splide {
     padding-inline: 3rem;
+    width: 110%;
 }
 
 ul.splide__pagination {
@@ -351,6 +364,18 @@ li.splide__slide img {
     background-size: cover;
     object-fit: cover;
 }
+
+.splide__list {
+    width: 100%;
+}
+
+.splide:not( .is-overflow ) .splide__arrows {
+    display: none;
+}
+
+.splide:not( .is-overflow ) .splide__list {
+    justify-content: center;
+  }
 
 ul.splide__list {
     margin: 1rem !important;
@@ -373,6 +398,91 @@ p.text-suku {
     margin-inline: 10rem;
     text-align: center;
     color: #0D3B66;
+}
+
+.feedback {
+    display: flex;
+    gap: 5rem;
+    margin-inline: 2.5rem;
+}
+
+.feedback-description {
+    width: 100%;
+}
+
+.feedback-description h2 {
+    margin-bottom: 1rem;
+}
+
+.feedback-form {
+    width: 100%;
+}
+
+.feedback-verified {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-submit {
+    padding-inline: 2rem;
+    padding-block: .3rem;
+    background-color: #0D3B66;
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.feedback-item {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feedback-card {
+    width: 25rem;
+    border: 1px solid;
+    padding: .5rem;
+    border-radius: 10px;
+    padding-inline: 1rem;
+    padding-bottom: 2rem;
+}
+
+.title-team {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.about-us__page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-inline: 5rem;
+    color: #0D3B66;
+}
+
+.about-us__creator {
+    color: #0D3B66;
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-us__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.about-us__card img {
+    width: 15rem;
+    border-radius: 10px;
 }
 
 footer {
@@ -536,4 +646,302 @@ a.login-register__now {
 
 .register-item form {
     width: 25rem;
+}
+
+@media screen and (max-width: 1024px) {
+    #carouselImage .carousel-control-prev {
+        left: 10% !important;
+    }
+
+    #carouselImage .carousel-control-next {
+        right: 10% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    iframe {
+        height: 300px;
+    }
+
+    button.carousel-control-prev, .carousel-control-next {
+        height: 50px
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        top: 130px !important;
+        width: 3rem !important;
+    }
+
+    .carousel-control-prev {
+        left: -10% !important;
+    }
+
+    .carousel-control-next {
+        right: -10% !important;
+    }
+
+    .collapse.header {
+        padding-top: 1rem;
+        gap: 1rem;
+        position: absolute;
+        flex-direction: column !important;
+        top: 60px;
+        width: 99%;
+        background-color: #fff;
+        margin-left: -4rem;
+    }
+
+    .navbar-collapse.collapsing {
+        padding-top: 1rem;
+        gap: 1rem;
+        position: absolute;
+        flex-direction: column !important;
+        top: 60px;
+        width: 99%;
+        background-color: #fff;
+        margin-left: -4rem;
+    }
+
+    .detail-island {
+        width: 90%;
+    }
+
+    .collapse#jawa img {
+        width: 100%;
+    }
+
+    .collapsing#jawa img {
+        width: 100%;
+    }
+
+    .collapse#kalimantan img {
+        width: 50%;
+    }
+
+    .collapsing#kalimantan img {
+        width: 50%;
+    }
+
+    .collapse#sumatera img {
+        width: 50%;
+    }
+
+    .collapsing#sumatera img {
+        width: 50%
+    }
+
+    .collapse#sulawesi img {
+        width: 50%;
+    }
+
+    .collapsing#sulawesi img {
+        width: 50%;
+    }
+
+    .collapse#papua img {
+        width: 60%;
+    }
+
+    .collapsing#papua img {
+        width: 60%;
+    }
+
+    form[role=search] {
+        margin-right: 0;
+    }
+
+    form svg {
+        bottom: 70px;
+        left: 230px;
+    }
+
+    ol, ul {
+        padding-left: 0 !important;
+    }
+
+    #carouselImage button.carousel-control-prev, #carouselImage button.carousel-control-next {
+        height: 15%;
+    }
+
+    #carouselImage .carousel-control-prev {
+        left: -5% !important;
+    }
+
+    #carouselImage .carousel-control-next {
+        right: -5% !important;
+    }
+    
+    p.text-pulau {
+        margin-inline: 4rem;
+    }
+
+    p.text-suku {
+        margin-inline: 2rem;
+    }
+
+    .feedback {
+        margin-inline: 0;
+    }
+
+    .feedback-card {
+        width: 18rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        padding-inline: 2rem
+    }
+
+    main {
+        padding-inline: .5rem;
+    }
+    
+    iframe {
+        height: 250px;
+    }
+
+    .collapse.header {
+        width: 96%;
+        margin-left: -2rem;
+    }
+
+    .navbar-collapse.collapsing {
+        width: 96%;
+        margin-left: -2rem;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        top: 100px !important;
+        width: 3rem !important;
+    }
+
+    .carousel-control-prev {
+        left: -10% !important;
+    }
+
+    .carousel-control-next {
+        right: -10% !important;
+    }
+
+    #carouselImage .carousel-control-prev {
+        left: -10% !important;
+    }
+
+    #carouselImage .carousel-control-next {
+        right: -10% !important;
+    }
+
+    .collapse#kalimantan img {
+        width: 80%;
+    }
+
+    .collapsing#kalimantan img {
+        width: 80%;
+    }
+
+    .collapse#sumatera img {
+        width: 70%;
+    }
+
+    .collapsing#sumatera img {
+        width: 70%
+    }
+
+    .collapse#sulawesi img {
+        width: 70%;
+    }
+
+    .collapsing#sulawesi img {
+        width: 70%;
+    }
+
+    .collapse#papua img {
+        width: 80%;
+    }
+
+    .collapsing#papua img {
+        width: 80%
+    }
+
+    .detail-island {
+        text-align: center;
+    }
+
+    .detail-island a {
+        padding-inline: .5rem;
+    }
+
+    form svg {
+        left: 55px;
+    }
+
+    .logo img.text-logo {
+        display: none
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    img.image-pulau {
+        width: 20rem;
+        height: 15rem;
+    }
+
+    #carouselImage button.carousel-control-prev, #carouselImage button.carousel-control-next {
+        height: 20%;
+    }
+
+    #carouselImage .carousel-control-prev, #carouselImage .carousel-control-next {
+        top: 100px !important;
+    }
+
+    p.text-pulau {
+        margin-inline: 1.5rem
+    }
+
+    img.image-suku {
+        width: 100%;
+    }
+
+    p.text-suku {
+        margin-inline: 1rem;
+    }
+
+    .feedback {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .about-us {
+        margin-top: 1rem;
+    }
+
+    .footer-item {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    form svg {
+        left: 35px;
+    }
+
+    .carousel-control-prev {
+        left: -10% !important;
+    }
+
+    .carousel-control-next {
+        right: -10% !important;
+    }
+
+    .feedback {
+        margin-inline: 1rem;
+    }
+
+    .feedback-card {
+        width: 18rem;
+    }
 }

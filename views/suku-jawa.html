@@ -16,79 +16,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="../components/header-bar.js"></script>
+    <script src="../components/footer-bar.js"></script>
+    <script src="../utils/views-search.js"></script>
     <title>BudayaKu</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <header>
-        <div class="logo">
-          <picture>
-            <a href="../index.html"
-              ><img src="./../img/logo12.png" alt="BudayaKu"
-            /></a>
-          </picture>
-          <picture style="padding-right: 1rem">
-            <img class="text-logo" src="./../img/logo.svg" alt="" />
-          </picture>
-          <form class="d-flex" role="search">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
-              viewBox="0 0 25 25"
-              fill="none">
-              <g clip-path="url(#clip0_118_20)">
-                <path
-                  d="M24.6582 21.6162L19.79 16.748C19.5703 16.5283 19.2725 16.4062 18.96 16.4062H18.1641C19.5117 14.6826 20.3125 12.5146 20.3125 10.1562C20.3125 4.5459 15.7666 0 10.1562 0C4.5459 0 0 4.5459 0 10.1562C0 15.7666 4.5459 20.3125 10.1562 20.3125C12.5146 20.3125 14.6826 19.5117 16.4062 18.1641V18.96C16.4062 19.2725 16.5283 19.5703 16.748 19.79L21.6162 24.6582C22.0752 25.1172 22.8174 25.1172 23.2715 24.6582L24.6533 23.2764C25.1123 22.8174 25.1123 22.0752 24.6582 21.6162ZM10.1562 16.4062C6.7041 16.4062 3.90625 13.6133 3.90625 10.1562C3.90625 6.7041 6.69922 3.90625 10.1562 3.90625C13.6084 3.90625 16.4062 6.69922 16.4062 10.1562C16.4062 13.6084 13.6133 16.4062 10.1562 16.4062Z"
-                  fill="#C5C5C5" />
-              </g>
-              <defs>
-                <clipPath id="clip0_118_20">
-                  <rect width="25" height="25" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Cari Berdasarkan Pulau, Suku"
-              aria-label="Search" />
-          </form>
-        </div>
-        <div class="list">
-          <ul>
-            <div class="dropdown">
-              <button
-                class="dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Pulau
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="./pulau-jawa.html">Jawa</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Kalimantan</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Sumatera</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Sulawesi</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Papua</a>
-                </li>
-              </ul>
-            </div>
-            <li><a href="#">About Us</a></li>
-            <div class="user">
-              <li><a href="./login.html">Log In</a></li>
-            </div>
-          </ul>
-        </div>
-      </header>
-    </div>
+    <header-bar></header-bar>
     <div class="container-xxl">
       <main>
         <article>
@@ -112,31 +46,25 @@
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <a href="#">
-                    <div class="overlay-pulau"></div>
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/314f/1a8a/de4ba34825666539aa7e4a89da495198?Expires=1701648000&Signature=nGTUCpEhcO103fvH~u5DGleDg460tmSttuxvvBgulb4DNvksoL3HyPhqesEF9QefdmXjTAsTrpSiiTTEq6zpmixA1W3Y3qoTUjeM6cA8YIavitAd6ce8WPe2IWKB5UvNIgD1E4ab2BFKbkvZwBTzhvqS7dQCB4CzLh5jrbYfLOcg-PuCW3DNcAZcpWqUTcEsOj1fFw7IW1uxRpYjbDv3hfQTXGnp3y315GrlxYUwOvWbk1SqI1i5cq62nwQd15FXaQ14zWu32ek6tZnwGxxAcJb~pIRB5SEmue~1H-KeFFrYgJaldZWpcKL~Oqt78zJe0mUJGPzAEnBs-uxqZNGNVg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                      alt="" />
-                    <p class="text-pulau__item">Suku Jawa</p>
-                  </a>
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/d96b/40a9/eaa45238291e93486548889024fa6a99?Expires=1702252800&Signature=noMiUUAV1x91oo0qzhojJVZ4xPMbYuJcXrTP1gVWWl7-KxP35pqQsVvO6S9uH5cFLO0sf~aNfN~5JbDOaNpN3qKlHlK31Glu1Dlq8Ok5I2-dApTysuqvUkf548c6b9k-k2bPC~rlKLlWzyQYIg4nDfW6FGnMPmeJEI7xOY8ws0u4CSt2iz9Oo2SnKdJEHnzNQR8pRt9yFbqgBuTnDxteGiuVI8Hs4TAe~CC~gYokUA8u6Z7G1-M4o7RuNr6vcJn~P1Iii8BjALmN93M0tax5kIpML172LNG926tXLX~4lGA5lfcszJ~OaBiVh34~rw0~rElq4bo5mz30ZoSSA6dEng__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="" />
+                  <p class="text-pulau__item">Pakaian Adat</p>
                 </li>
                 <li class="splide__slide">
-                  <a href="#">
-                    <div class="overlay-pulau"></div>
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/ef96/7422/2c6fff7ed482493eb48542ebb4073897?Expires=1702252800&Signature=qGP6tkrZltOwwdBI0xxSLkqntmIfoWkYbp-1F-UHCrSUcCaArWUYci5vqM16y-LUVUkEeW8J~8B2FYAv~39nm-E7ZPZe1eIvzbVv7ctgFjaoigRy6OIewIVL8lUbJ0pHfPBqo4CK5x6~PSEUXlxEANuqFUFF-6S7Enw9rO5cM1GD5v~EUHNaj-0jirFsWxM376OZtFKjrlhCIfV4~x4bXncqz-CqZsuLQOzhWPUr6x7Eu2UM091OQykhibRQ~bKEaNH0QgHtSgoCWgQSKpEyinkEdl5f1xEI4z4bFRVv7iKDROWBWr7KgSeNywpkYWmHs5PEvvSt5NJ20Kc~uTjF-A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                      alt="" />
-                    <p class="text-pulau__item">Suku Sunda</p>
-                  </a>
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/0129/aa99/ed3d8a0527c26bfd55fde29049fa72aa?Expires=1702252800&Signature=hPjkrNbCXWT4GZWc0ruOkKwjvi47BkpIEbh~U1SjFUn84LELZBs9lu14NPVN4FQ7UEBYUqmzinwSBrCPUbrcS7nmn4Zdj03W0KwkWwQfXW9O7YEMoVJCNNKIYEt8OaVjBKWQ3rEVYrfPAxtlXBC08WsGOVYWgn-h9rTu~5d8b6d-3~I9WwRrqJWH3S2sYNUInRlW~BzwrnD4GzeIK2eY6JTjVBccashjScIWmHyIkPX3rp7ozfCEwrtM~rndMM-LRORh9jEPcblcyiq26MVUj45CoMnZsRkGKchK9O5SHujQWWo25rCxUU1dYFF~NI4NR1hRDPI~acOCq4MvkY-nZA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="" />
+                  <p class="text-pulau__item">Rumah Adat</p>
                 </li>
                 <li class="splide__slide">
-                  <a href="#">
-                    <div class="overlay-pulau"></div>
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/0ca7/6798/ba9586368d5e5fb551c854a00152eedb?Expires=1702252800&Signature=S0mY4mfkUZubkpvQClfUq2Cz~TUt0EyBauKgRkcSfjS6zdQX7IKqE7oZZQwVTS4Fsbl0jsjrxLcTIvhh-p4YLF3OhE7UomST1nIN1Q9kBM8EGDb0F0RN8bnXV-TlSnvVyOajflSj-QXV34pVB50pfMPLB1loArHaI~Tb~RetRcgWrR2XyFl~lYrFgDbATTEJp-DOReEtaRW41TIDB8RDx7bQtWunsXj0Vu7zWqTrqdPAzLht2oaOsf5nTB1qbRHM7EvTBDKaTijXbZKpW-EFSAnyvkbANHyJy2PAqXxv3zsdHQQqXRuLCuVz-Xi7C1wWjjAGrYugPs11HcoLO~V8nw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                      alt="" />
-                    <p class="text-pulau__item">Suku Betawi</p>
-                  </a>
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/5778/69ad/1bdc651668d64fcbc026e5f9c48c247b?Expires=1702252800&Signature=jaz6iRJkxxT09goPX1~znNGhNz7RceKh~olM2kFP2whlI9Dz9~d-jb3ZtbBlwVV7zZepz12cA1RJJlc6tW~kb0Sfbg1lQ9Wx~7IT-MJXsRknHE3UT73vPWwggXs99CrQRWdm2dvi3-QpbiR1t2c0zBrl16RUzDsAIUKrf6t4GViLVYI2Bl6nTjCGNnLPo2UuoYFrLksKMNhrXQQcyMeramZn9TWmSkiILK4PZ3TPhkdi3cPhjaelwysymNmF2y2iTqf3~Wa5547UgXLA-cEAJVVxwWASIFdMpJdMhM3AD0LVyuLkHlHXAKWwayZrsRM1Im6bDVu3diloBYtpfXsZdw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="" />
+                  <p class="text-pulau__item">Upacara Sekaten</p>
                 </li>
               </ul>
             </div>
@@ -145,37 +73,31 @@
           </section>
         </article>
         <article>
-          <h3>Adat Istiadat</h3>
+          <h3>Senjata</h3>
           <section class="splide" id="slider2" aria-label="Placeholder Example">
             <ul class="splide__pagination"></ul>
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <a href="#">
-                    <div class="overlay-pulau"></div>
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/314f/1a8a/de4ba34825666539aa7e4a89da495198?Expires=1701648000&Signature=nGTUCpEhcO103fvH~u5DGleDg460tmSttuxvvBgulb4DNvksoL3HyPhqesEF9QefdmXjTAsTrpSiiTTEq6zpmixA1W3Y3qoTUjeM6cA8YIavitAd6ce8WPe2IWKB5UvNIgD1E4ab2BFKbkvZwBTzhvqS7dQCB4CzLh5jrbYfLOcg-PuCW3DNcAZcpWqUTcEsOj1fFw7IW1uxRpYjbDv3hfQTXGnp3y315GrlxYUwOvWbk1SqI1i5cq62nwQd15FXaQ14zWu32ek6tZnwGxxAcJb~pIRB5SEmue~1H-KeFFrYgJaldZWpcKL~Oqt78zJe0mUJGPzAEnBs-uxqZNGNVg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                      alt="" />
-                    <p class="text-pulau__item">Suku Jawa</p>
-                  </a>
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/0359/5b2a/c9ea56027f6113053560fcd36cdfc783?Expires=1702252800&Signature=HTU3PFoemetbDZGbvvzv2z2W7NuFeei4HuEWJhrofX90FgLlX6JRZWNgI6gShzE5ZeJf7VRWPcMEQLpJv3-4MdO5sXkizANvXVR~-b~zjXtT9v4S~~mLku3YyXYKqlOKm7iLaLdNdGkjynFDAdxgKDgUMAbMf4IpmPehUAJxqBOHbELstAPZBIP6iruXEGm5ID3o2UyD7S60pFRRpaLzTqL9UA00YbhrrNeoOuZycnHctL7mlR~9kX5ajz3oxiKYKZnbXAqX7dEZ6CgGzqMhRmPQgcazD0PHol~siPUZnVY52KZNgvbpfisY4Y3lWlQA-t0~FvJlAtbh4nRmTeLqsQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="" />
+                  <p class="text-pulau__item">Keris</p>
                 </li>
                 <li class="splide__slide">
-                  <a href="#">
-                    <div class="overlay-pulau"></div>
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/ef96/7422/2c6fff7ed482493eb48542ebb4073897?Expires=1702252800&Signature=qGP6tkrZltOwwdBI0xxSLkqntmIfoWkYbp-1F-UHCrSUcCaArWUYci5vqM16y-LUVUkEeW8J~8B2FYAv~39nm-E7ZPZe1eIvzbVv7ctgFjaoigRy6OIewIVL8lUbJ0pHfPBqo4CK5x6~PSEUXlxEANuqFUFF-6S7Enw9rO5cM1GD5v~EUHNaj-0jirFsWxM376OZtFKjrlhCIfV4~x4bXncqz-CqZsuLQOzhWPUr6x7Eu2UM091OQykhibRQ~bKEaNH0QgHtSgoCWgQSKpEyinkEdl5f1xEI4z4bFRVv7iKDROWBWr7KgSeNywpkYWmHs5PEvvSt5NJ20Kc~uTjF-A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                      alt="" />
-                    <p class="text-pulau__item">Suku Sunda</p>
-                  </a>
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/8228/daae/ce90d523210c6a8dbd4aea66699de7d1?Expires=1702252800&Signature=FJPFX4HUuUKxyZZw1h8W5uzel0sa-ioee6yAXF7M0YOpCeVWUTfuwagIP9h9eGjUJvMl7ZtfXouv0QF~jj0~Z6kb1xGRigs4cvrMbaAU0DhVkavTKwgzPfwJRqJ3yPReaG2xL3DEEC72SxrccQ940hgh5Uc6akOb34xL6q91ttq6LfsYm-igr22RiwBwKDHnVBoPS264hsMP6eTbPqiybTlYuIFE-nkvLX4ZnJ~I5HPYFX5CgpSb3hxq7srHrspLG3Tf4HuEUMZcNgRN2NVIDNYArJr9rZmWGk0JZh8834EqJ0~0ORPiW6ITZtNxQC3T6tZOW5TfTDFZ7WgyRw0T8A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="" />
+                  <p class="text-pulau__item">Plintheng</p>
                 </li>
                 <li class="splide__slide">
-                  <a href="#">
-                    <div class="overlay-pulau"></div>
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/0ca7/6798/ba9586368d5e5fb551c854a00152eedb?Expires=1702252800&Signature=S0mY4mfkUZubkpvQClfUq2Cz~TUt0EyBauKgRkcSfjS6zdQX7IKqE7oZZQwVTS4Fsbl0jsjrxLcTIvhh-p4YLF3OhE7UomST1nIN1Q9kBM8EGDb0F0RN8bnXV-TlSnvVyOajflSj-QXV34pVB50pfMPLB1loArHaI~Tb~RetRcgWrR2XyFl~lYrFgDbATTEJp-DOReEtaRW41TIDB8RDx7bQtWunsXj0Vu7zWqTrqdPAzLht2oaOsf5nTB1qbRHM7EvTBDKaTijXbZKpW-EFSAnyvkbANHyJy2PAqXxv3zsdHQQqXRuLCuVz-Xi7C1wWjjAGrYugPs11HcoLO~V8nw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                      alt="" />
-                    <p class="text-pulau__item">Suku Betawi</p>
-                  </a>
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/a9c3/8109/5d5bbd32c0179711ec7a36770eede36f?Expires=1702252800&Signature=aBLB6JDo31atyDNVBLhk1IGa31Fn7QdcXxGSiZ2mJHmGc9Mfm9hX8aa2W3FkHObPA6N78oho9Gw6EGVxBHBNtfb9zbFyK-f3-AovUnudO5uS4Tdg1RUgTVO0Z6srqhuzeen--gQfYH0oW92BXBMChPaY45LQeFBrteMKg2OGuzPdb5aSEBEx4ANE3Q-uQqghDbowWrmfddOZbffdyBieu7Dc2GhnN7F06XgvCS2mj5qQd2sqZpzi3uUrSjTVswfXrKndJxje~vXKZW0jvZG~gRKtPAx6GrSmtrAyg8im54Sx0RRjA~SqtnfrPF27lZNz2kAMdHLZg6mt9lg5lybp~w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="" />
+                  <p class="text-pulau__item">Thulup</p>
                 </li>
               </ul>
             </div>
@@ -183,38 +105,144 @@
             <!-- default location -->
           </section>
         </article>
+        <article>
+          <h3>Seni</h3>
+          <section class="splide" id="slider2" aria-label="Placeholder Example">
+            <ul class="splide__pagination"></ul>
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/fea3/aba9/0ebe3edc73919795dd84057aa9d733c8?Expires=1702252800&Signature=A7xyg2SvsURh7HAcziDBYuGmONy0b-N2nv2YuoBD1b1IZH3ISiG~YQFd0Xwa4sIVNT9fdxN76mrUfNFZnHACajQ2WIJ1vqdVlTlWnuthpivXi08LpvUzkVti69pC1C~V59ssQW4KegUbUESBgXspPgj-g9ZnMk96aVFFiQiUuQPyloU38eD4ObdlWPSSv2GPrUcaoaUZBEqrXGtwAxHoB9UVlWcM4W7ddEfjtLSwet80wABBYq~03MN~J9sWFWeruxQ72s7JbFLgkOhVL3cJJeSvbHHT1wNu8jJNkNvlKrrxAgTwRvUIEKdekZITr9EhQ-0qD8nFIl7tj6FpWonJBQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="" />
+                  <p class="text-pulau__item">Tari Merak</p>
+                </li>
+                <li class="splide__slide">
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/048a/30ad/5eb847f8abc4e587e3946ea926a89c2a?Expires=1702252800&Signature=MGlEpKnOlk1tBGgXq19EnpS~E18DjKWd7kweNr9VjXsZ03h20Xtcq661ycwqiGj4qqF4o~xtRfcuLIu13FOtfK~t~EX~4dJUu65m5nMO-P-sqY8MwUygEZanehD3ZST3N-wsdRa7kAJQaYzY6NNhhoY5TK-ZWW0J5hFyIeKDJ3d5K1UsW-9slvTLxzVyiPRaDSMQLaanQgKWrvIh~B9vvcIGV7FU1zHx0R1rDuF5IrCWrlKcyrpFa-m0smgsf1jhj1hsf-KySo-0XfRsnr4fHoDUNixXjiqCSQrmhkpdHYmvJCR58E1ANJQ1g702uOqCAYEudiHni9SXz3LjfU-Fkg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="" />
+                  <p class="text-pulau__item">Tari Bondan Payung</p>
+                </li>
+                <li class="splide__slide">
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/833c/7a66/956152e09ceaed8b60331647ad831955?Expires=1702252800&Signature=G-GbQetybzb-1590CuGhbT095K5I-fMrB6gtTeK4e4GFkdr6yi3qiekRZobfxVeC2fSgt1~zl5Im9nyZ-e5QWGzkMPDUHTWM7q6p1UiHtYhHcEj-S3e9Sn~ne~EnhUuhHHwLi4~K~T~qlFUVjxIywDdR71XSZXhFHfqMtDV81TLUZJyHK7ZT4-GEpSS00yXeNgwFd4UEuOyFUZOSuiyVZKVGW8Ab~JvCiBvkIoNEkcuolWdJ4pZhkcZrH7QyPFT1Sxk52Cg1KgqDWZlDv1yP2PAR6iNNk0XXSRYAB6LmRniDZONAdxzLpp8j0xaApZ1-D2frJb6wS5OHvvziSM0zIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="" />
+                  <p class="text-pulau__item">Tari Gambyong</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- default location -->
+          </section>
+        </article>
+        <article>
+          <h3>Bahasa</h3>
+          <section class="splide" id="slider2" aria-label="Placeholder Example">
+            <ul class="splide__pagination"></ul>
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/fe69/4db9/394c0f7b114151431030d8879de7f5e5?Expires=1702252800&Signature=lWj7WpIICLdHW0KOlx0agM3Iv1JP3BX6XusxkHIqgQ1~w9Ifp0L2f5XwUqEAIbinMvt~0m0kzRvWfXF02idZSF-2zZfYKyoYarFuhkUAzReABI3o0Hv~s2pYxwFFNAuKHSll2pilBgBh1bMIXHMox5XBKlLdlwbnnH~AqBmoWYTwO4ySKAe5PpsMWwmVlbOSEDmjE8qJkU568NvxQWzMxm9R396e3oxnKxNC9r17tE464TrN3LIa5MnEL1h0IqzBufP-yIbbnjxym8AHOWqet6iEcq9ns8VS6m9QuqZ7~oDCQ-GsuMdLQjfXZykg3~dSdT2hijZ1by35MtztjgdGlQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="" />
+                  <p class="text-pulau__item">Bahasa Jawa</p>
+                </li>
+                <li class="splide__slide">
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://th.bing.com/th/id/R.1802f0a8833a4f0badef31754fbc2295?rik=FXFWBut3xdbvUA&riu=http%3a%2f%2fwww.diciamis.com%2fwp-content%2fuploads%2f2012%2f07%2fAksara-Sunda.jpg&ehk=f40nER0aLY%2fqhk0KswC62cbgDqPMJsMS9W7JnItju0o%3d&risl=&pid=ImgRaw&r=0"
+                    alt="" />
+                  <p class="text-pulau__item">Bahasa Sunda</p>
+                </li>
+                <li class="splide__slide">
+                  <div class="overlay-pulau"></div>
+                  <img
+                    src="https://i.ytimg.com/vi/3D0vvncfdi4/maxresdefault.jpg"
+                    alt="" />
+                  <p class="text-pulau__item">Bahasa Madura</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- default location -->
+          </section>
+        </article>
+        <article>
+          <div class="feedback mt-5">
+            <div class="feedback-description">
+              <h2>Feedback</h2>
+              <p class="mb-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
+                maxime sequi similique a, expedita enim doloribus, eveniet
+                pariatur dignissimos deserunt incidunt officia quisquam? Culpa
+                nam similique praesentium cumque temporibus. Rem?
+              </p>
+            </div>
+            <div class="feedback-form">
+              <form method="POST">
+                <div class="mb-3">
+                  <label for="nameFeedback" class="form-label">Nama</label>
+                  <input
+                    type="name"
+                    name="name"
+                    class="form-control"
+                    id="nameFeedback"
+                    required />
+                </div>
+                <div class="mb-3">
+                  <label for="feedbackComment" class="form-label"
+                    >Feedback</label
+                  >
+                  <textarea name="feedback" class="form-control"></textarea>
+                </div>
+                <div class="feedback-verified">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Jadikan sebagai anonim
+                    </label>
+                  </div>
+                  <div class="mt-5">
+                    <button type="submit" class="feedback-submit">Kirim</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="feedback-item mt-5">
+            <div class="feedback-card">
+              <p>Nama : Raden</p>
+              <p>Feedback : untuk informasinya cukup jelas</p>
+            </div>
+            <div class="feedback-card">
+              <p>Nama : Anonim</p>
+              <p>
+                Feedback : Informasi masih ada yang kurang dibagian adat
+                istiadat
+              </p>
+            </div>
+            <div class="feedback-card">
+              <p>Nama : Raden</p>
+              <p>Feedback : untuk informasinya cukup jelas</p>
+            </div>
+            <div class="feedback-card">
+              <p>Nama : Raden</p>
+              <p>Feedback : untuk informasinya cukup jelas</p>
+            </div>
+          </div>
+        </article>
       </main>
     </div>
     <div class="container-fluid">
-      <footer>
-        <div class="footer-title">
-          <picture>
-            <a href="#"><img src="./../img/logo12.png" alt="" /></a>
-          </picture>
-          <picture>
-            <img class="text-logo" src="./../img/logo.svg" alt="" />
-          </picture>
-        </div>
-        <div class="footer-pulau">
-          <h4>Pulau</h4>
-          <a href="../views/pulau-jawa.html">Pulau Jawa</a>
-          <a href="#">Pulau Kalimantan</a>
-          <a href="#">Pulau Sumatera</a>
-          <a href="#">Pulau Sulawesi</a>
-          <a href="#">Pulau Papua</a>
-        </div>
-        <a class="about-us" href="#">About Us</a>
-        <div class="footer-item">
-          <div class="footer-medsos">
-            <i class="fa-brands fa-facebook-f"></i>
-            <p>: Facebook</p>
-          </div>
-          <div class="footer-medsos">
-            <i class="fa-brands fa-instagram"></i>
-            <p>: Instagram</p>
-          </div>
-        </div>
-      </footer>
+      <footer-bar></footer-bar>
       <div class="copyright">
         <p>© 2023 BudayaKu</p>
       </div>

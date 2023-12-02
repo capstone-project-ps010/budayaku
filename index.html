@@ -16,89 +16,117 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="./utils/search.js"></script>
     <title>BudayaKu</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <header>
-        <div class="logo">
-          <picture>
-            <a href="#"><img src="./img/logo12.png" alt="BudayaKu" /></a>
-          </picture>
-          <picture style="padding-right: 1rem">
-            <img class="text-logo" src="./img/logo.svg" alt="" />
-          </picture>
-          <form class="d-flex" role="search">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
-              viewBox="0 0 25 25"
-              fill="none">
-              <g clip-path="url(#clip0_118_20)">
-                <path
-                  d="M24.6582 21.6162L19.79 16.748C19.5703 16.5283 19.2725 16.4062 18.96 16.4062H18.1641C19.5117 14.6826 20.3125 12.5146 20.3125 10.1562C20.3125 4.5459 15.7666 0 10.1562 0C4.5459 0 0 4.5459 0 10.1562C0 15.7666 4.5459 20.3125 10.1562 20.3125C12.5146 20.3125 14.6826 19.5117 16.4062 18.1641V18.96C16.4062 19.2725 16.5283 19.5703 16.748 19.79L21.6162 24.6582C22.0752 25.1172 22.8174 25.1172 23.2715 24.6582L24.6533 23.2764C25.1123 22.8174 25.1123 22.0752 24.6582 21.6162ZM10.1562 16.4062C6.7041 16.4062 3.90625 13.6133 3.90625 10.1562C3.90625 6.7041 6.69922 3.90625 10.1562 3.90625C13.6084 3.90625 16.4062 6.69922 16.4062 10.1562C16.4062 13.6084 13.6133 16.4062 10.1562 16.4062Z"
-                  fill="#C5C5C5" />
-              </g>
-              <defs>
-                <clipPath id="clip0_118_20">
-                  <rect width="25" height="25" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Cari Berdasarkan Pulau, Suku"
-              aria-label="Search" />
-          </form>
-        </div>
-        <div class="list">
-          <ul>
-            <div class="dropdown">
-              <button
-                class="dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Pulau
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="./views/pulau-jawa.html"
-                    >Jawa</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./views/pulau-kalimantan.html"
-                    >Kalimantan</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./views/pulau-sumatera.html"
-                    >Sumatera</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./views/pulau-sulawesi.html"
-                    >Sulawesi</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./views/pulau-papua.html"
-                    >Papua</a
-                  >
-                </li>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <header>
+          <div class="logo">
+            <picture>
+              <a href="./index.html"
+                ><img src="./img/logo12.png" alt="BudayaKu"
+              /></a>
+            </picture>
+            <picture style="padding-right: 1rem">
+              <img class="text-logo" src="./img/logo.svg" alt="" />
+            </picture>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse header navbar-collapse" id="navbarText">
+            <form
+              class="d-flex"
+              role="search"
+              id="search-form"
+              onsubmit="search(); return false;">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none">
+                <g clip-path="url(#clip0_118_20)">
+                  <path
+                    d="M24.6582 21.6162L19.79 16.748C19.5703 16.5283 19.2725 16.4062 18.96 16.4062H18.1641C19.5117 14.6826 20.3125 12.5146 20.3125 10.1562C20.3125 4.5459 15.7666 0 10.1562 0C4.5459 0 0 4.5459 0 10.1562C0 15.7666 4.5459 20.3125 10.1562 20.3125C12.5146 20.3125 14.6826 19.5117 16.4062 18.1641V18.96C16.4062 19.2725 16.5283 19.5703 16.748 19.79L21.6162 24.6582C22.0752 25.1172 22.8174 25.1172 23.2715 24.6582L24.6533 23.2764C25.1123 22.8174 25.1123 22.0752 24.6582 21.6162ZM10.1562 16.4062C6.7041 16.4062 3.90625 13.6133 3.90625 10.1562C3.90625 6.7041 6.69922 3.90625 10.1562 3.90625C13.6084 3.90625 16.4062 6.69922 16.4062 10.1562C16.4062 13.6084 13.6133 16.4062 10.1562 16.4062Z"
+                    fill="#C5C5C5" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_118_20">
+                    <rect width="25" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <input
+                class="form-control me-2"
+                type="search"
+                id="search-input"
+                placeholder="Cari Berdasarkan Pulau, Suku"
+                aria-label="Search" />
+            </form>
+            <div class="list">
+              <ul>
+                <div class="dropdown">
+                  <button
+                    class="dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Pulau
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="./views/pulau-jawa.html"
+                        >Jawa</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./views/pulau-kalimantan.html"
+                        >Kalimantan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./views/pulau-sumatera.html"
+                        >Sumatera</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./views/pulau-sulawesi.html"
+                        >Sulawesi</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./views/pulau-papua.html"
+                        >Papua</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <li><a href="./views/about-us.html">About Us</a></li>
+                <div class="user">
+                  <li><a href="./views/login.html">Log In</a></li>
+                </div>
               </ul>
             </div>
-            <li><a href="#">About Us</a></li>
-            <div class="user">
-              <li><a href="./views/login.html">Log In</a></li>
-            </div>
-          </ul>
-        </div>
-      </header>
-    </div>
+          </div>
+        </header>
+      </div>
+    </nav>
     <div class="container-xxl">
       <main>
         <div class="hero">
@@ -156,78 +184,85 @@
         </div>
         <article>
           <h1>Explore Island</h1>
-          <div class="list-cards">
-            <div class="item-card">
-              <a
-                data-bs-toggle="collapse"
-                href="#jawa"
-                role="button"
-                aria-expanded="false"
-                aria-controls="jawa">
-                <div class="overlay"></div>
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/5593/9408/667c7cf4df0439655013cd9acb297b42?Expires=1701648000&Signature=VnrQU6ATLJGe0M3BGk27riY99VvLHyjG7GyMn~FYhW53f9Xm1gOM4qeVTAeD1ny9jYKq5y32hwIAWk7lNpvktDbO3KUuuhZKCbxvJtdeuAV4w6mR2eyv1gMc7YrbRtUNASG~RDBsQIdCDSA2TyBzpmYFmGgWULV7A4RLQaKlFYYTjf3nUst3lJTFarDOJPdvZtYKScMT~LFkH2-iXcHRzakmsp4tMBZUZ2sJWcdq8G7rTDgTL-eyQtd~0p57YLB8bJwUzUhhPsaZQq~KX88MeeE~gJts4FF0ohM9z~8iaHzO1aiFY1toMKa1oSMoxfuZKLSMzymX0so67UAevgUc~w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt="" />
-                <p class="item-text">Jawa</p>
-              </a>
+          <section class="splide" aria-label="Placeholder Example">
+            <ul class="splide__pagination"></ul>
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <a
+                    data-bs-toggle="collapse"
+                    href="#jawa"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="jawa">
+                    <div class="overlay-pulau"></div>
+                    <img
+                      src="https://s3-alpha-sig.figma.com/img/5593/9408/667c7cf4df0439655013cd9acb297b42?Expires=1701648000&Signature=VnrQU6ATLJGe0M3BGk27riY99VvLHyjG7GyMn~FYhW53f9Xm1gOM4qeVTAeD1ny9jYKq5y32hwIAWk7lNpvktDbO3KUuuhZKCbxvJtdeuAV4w6mR2eyv1gMc7YrbRtUNASG~RDBsQIdCDSA2TyBzpmYFmGgWULV7A4RLQaKlFYYTjf3nUst3lJTFarDOJPdvZtYKScMT~LFkH2-iXcHRzakmsp4tMBZUZ2sJWcdq8G7rTDgTL-eyQtd~0p57YLB8bJwUzUhhPsaZQq~KX88MeeE~gJts4FF0ohM9z~8iaHzO1aiFY1toMKa1oSMoxfuZKLSMzymX0so67UAevgUc~w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                      alt="" />
+                    <p class="text-pulau__item">Jawa</p>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a
+                    data-bs-toggle="collapse"
+                    href="#kalimantan"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="kalimantan">
+                    <div class="overlay-pulau"></div>
+                    <img
+                      src="https://s3-alpha-sig.figma.com/img/6e5d/e013/a8d1c465b17ef55a6ae0bfbdcde09cb9?Expires=1701648000&Signature=bcp0sN3-U-KWOp2WG4cCZhjFMpA1bRRkjsXPFFxkMAgYOy4FKKTLyZx-pLmDG1Cs2IG597GXhLOP2lTedy4m4G~Um3w-G2eCbf3V7Xi6GLI-bHPZb9FZw6fuFdQhNNSGAiiDK5njDyyK1t7Qe6ue9vqVJPl6DNNydCunOA0kHncquJltrWKq~ZIT6tScbFCPciNqehjHA3hYqdDj3h33fO4UDVmyXZPa-jewtomF61fAY4~LRz5P2TgfwVbxEadOjAkfre9VwvUaCkMuPRFG4QRnVY6PI4B41rFNSkYCpLDovzz-5BsnkjjSW9k88zt6tsd7h5PntfUxS8HnSehMAA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                      alt="" />
+                    <p class="text-pulau__item">Kalimantan</p>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a
+                    data-bs-toggle="collapse"
+                    href="#sumatera"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="sumatera">
+                    <div class="overlay-pulau"></div>
+                    <img
+                      src="https://s3-alpha-sig.figma.com/img/3395/2de1/f77a435b9659c8d9e2e1994e4cd6b3bd?Expires=1701648000&Signature=orPt22recgMfboLjtJh0XuCpyvW2RAOEbjCIcpm-3ATkgrwQfya2w3zD9wLiB1OohM1zSCokp-J5tlMpIQ-C6X8b7uCZJholWhidMU35PuBKpwfBorMaoCOTTSRZbJdhqcET-GAnDJmk3vUS5KYzs~HZ2K30Yfd9~wMdSHPAeFC473DZjlRWeURCIarjQz-JAvV2VTjRFmtONs-98FWXkwbERCuPnryThlwvueJzOPXUqESQqc5cYhR4x3WIcqDzeabA4UQVB0QLD6dE1zuNzGV7hJPBBFZ4TX0Dm1DjevBkF30hsKXqiKKdciaJ9TgAbkxLxBALG4vSsu8dsvCsjQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                      alt="" />
+                    <p class="text-pulau__item">Sumatera</p>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a
+                    data-bs-toggle="collapse"
+                    href="#sulawesi"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="sulawesi">
+                    <div class="overlay-pulau"></div>
+                    <img
+                      src="https://s3-alpha-sig.figma.com/img/bde7/719c/af62acd593af3fc21de9c3e53a457799?Expires=1701648000&Signature=MAI7kpBAHJiYJx40bX4LWGAqcV1bd0jN7--A8c3MhO3sVIzHQk5GE-0Jfym50OhACRIFSIf8v6rSSRUx81w6OqxmJC4-r6DmiRXnHfEsIY1W~PevYOH4dVOQN0hzDSCKbzvzfCqX~EaeNz51TlnaOg3ATFy3R1W0~HvHBWQ25tPkVVvenQoeTuc3ZelRjyJBA1vjmKqVRHN7KcxKo9HNulKqXYptOvai2qhWQUfnLs-syZw-zFDIP4CwwEDFaNpRZNxc0Ch3WCsbP3-L3LEzgrkMCM43qJKUswigA8vBkQGDyBLbLzYanaZQkMdpKV7xc6hH5KsOC9EkYlvg51UUcA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                      alt="" />
+                    <p class="text-pulau__item">Sulawesi</p>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a
+                    data-bs-toggle="collapse"
+                    href="#papua"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="papua">
+                    <div class="overlay-pulau"></div>
+                    <img
+                      src="https://s3-alpha-sig.figma.com/img/4f1c/40fd/dd39f503a2eeb1d98dcf0eb94ed5f7cd?Expires=1701648000&Signature=JkDaPyfi4W7UfjyFVE2evK~AO9D7kESBOptDMD-b9wyA2Y-kvLn4RFeQt6VJ7Zif0uuFKgoBGmERSHGSM4xwPmBRjU9rPQLakNo8EWm-CUAkt4crtKVI1DlVI~IF~Rz99qUbhc5FlRUm1oJ1M20FpZCLP3ijhlyhJ1Xq8~v0TwS57XqumHs-ev1lJ~Ygl9W1Yua6cPGAhs~yNNavNX2vV~WnYhlGKTkocmCja77OcivFHlwF7h6u0CsWWQP5xl1oQbmwChuddrQz9Gg0Ytz5tax2dtmkfMUiwz3Gf1weEHxRSZT7HNNpt-wUVBc9NpdpOrz5UBeukX2izEGAEmzJZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                      alt="" />
+                    <p class="text-pulau__item">Papua</p>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="item-card">
-              <a
-                data-bs-toggle="collapse"
-                href="#kalimantan"
-                role="button"
-                aria-expanded="false"
-                aria-controls="kalimantan">
-                <div class="overlay"></div>
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/6e5d/e013/a8d1c465b17ef55a6ae0bfbdcde09cb9?Expires=1701648000&Signature=bcp0sN3-U-KWOp2WG4cCZhjFMpA1bRRkjsXPFFxkMAgYOy4FKKTLyZx-pLmDG1Cs2IG597GXhLOP2lTedy4m4G~Um3w-G2eCbf3V7Xi6GLI-bHPZb9FZw6fuFdQhNNSGAiiDK5njDyyK1t7Qe6ue9vqVJPl6DNNydCunOA0kHncquJltrWKq~ZIT6tScbFCPciNqehjHA3hYqdDj3h33fO4UDVmyXZPa-jewtomF61fAY4~LRz5P2TgfwVbxEadOjAkfre9VwvUaCkMuPRFG4QRnVY6PI4B41rFNSkYCpLDovzz-5BsnkjjSW9k88zt6tsd7h5PntfUxS8HnSehMAA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt="" />
-                <p class="item-text">Kalimantan</p>
-              </a>
-            </div>
-            <div class="item-card">
-              <a
-                data-bs-toggle="collapse"
-                href="#sumatera"
-                role="button"
-                aria-expanded="false"
-                aria-controls="sumatera">
-                <div class="overlay"></div>
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/3395/2de1/f77a435b9659c8d9e2e1994e4cd6b3bd?Expires=1701648000&Signature=orPt22recgMfboLjtJh0XuCpyvW2RAOEbjCIcpm-3ATkgrwQfya2w3zD9wLiB1OohM1zSCokp-J5tlMpIQ-C6X8b7uCZJholWhidMU35PuBKpwfBorMaoCOTTSRZbJdhqcET-GAnDJmk3vUS5KYzs~HZ2K30Yfd9~wMdSHPAeFC473DZjlRWeURCIarjQz-JAvV2VTjRFmtONs-98FWXkwbERCuPnryThlwvueJzOPXUqESQqc5cYhR4x3WIcqDzeabA4UQVB0QLD6dE1zuNzGV7hJPBBFZ4TX0Dm1DjevBkF30hsKXqiKKdciaJ9TgAbkxLxBALG4vSsu8dsvCsjQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt="" />
-                <p class="item-text">Sumatera</p>
-              </a>
-            </div>
-            <div class="item-card">
-              <a
-                data-bs-toggle="collapse"
-                href="#sulawesi"
-                role="button"
-                aria-expanded="false"
-                aria-controls="sulawesi">
-                <div class="overlay"></div>
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/bde7/719c/af62acd593af3fc21de9c3e53a457799?Expires=1701648000&Signature=MAI7kpBAHJiYJx40bX4LWGAqcV1bd0jN7--A8c3MhO3sVIzHQk5GE-0Jfym50OhACRIFSIf8v6rSSRUx81w6OqxmJC4-r6DmiRXnHfEsIY1W~PevYOH4dVOQN0hzDSCKbzvzfCqX~EaeNz51TlnaOg3ATFy3R1W0~HvHBWQ25tPkVVvenQoeTuc3ZelRjyJBA1vjmKqVRHN7KcxKo9HNulKqXYptOvai2qhWQUfnLs-syZw-zFDIP4CwwEDFaNpRZNxc0Ch3WCsbP3-L3LEzgrkMCM43qJKUswigA8vBkQGDyBLbLzYanaZQkMdpKV7xc6hH5KsOC9EkYlvg51UUcA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt="" />
-                <p class="item-text">Sulawesi</p>
-              </a>
-            </div>
-            <div class="item-card">
-              <a
-                data-bs-toggle="collapse"
-                href="#papua"
-                role="button"
-                aria-expanded="false"
-                aria-controls="papua">
-                <div class="overlay"></div>
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/4f1c/40fd/dd39f503a2eeb1d98dcf0eb94ed5f7cd?Expires=1701648000&Signature=JkDaPyfi4W7UfjyFVE2evK~AO9D7kESBOptDMD-b9wyA2Y-kvLn4RFeQt6VJ7Zif0uuFKgoBGmERSHGSM4xwPmBRjU9rPQLakNo8EWm-CUAkt4crtKVI1DlVI~IF~Rz99qUbhc5FlRUm1oJ1M20FpZCLP3ijhlyhJ1Xq8~v0TwS57XqumHs-ev1lJ~Ygl9W1Yua6cPGAhs~yNNavNX2vV~WnYhlGKTkocmCja77OcivFHlwF7h6u0CsWWQP5xl1oQbmwChuddrQz9Gg0Ytz5tax2dtmkfMUiwz3Gf1weEHxRSZT7HNNpt-wUVBc9NpdpOrz5UBeukX2izEGAEmzJZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt="" />
-                <p class="item-text">Papua</p>
-              </a>
-            </div>
-          </div>
+
+            <!-- default location -->
+          </section>
         </article>
         <article>
           <div class="collapse" id="jawa">
@@ -367,5 +402,33 @@
         <p>© 2023 BudayaKu</p>
       </div>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var elms = document.getElementsByClassName('splide');
+
+        for (var i = 0; i < elms.length; i++) {
+          new Splide(elms[i], {
+            autoWidth: true,
+            drag: false,
+            perPage: 5,
+            focus: 0,
+            autoplay: true,
+
+            breakpoints: {
+              768: {
+                autoWidth: true,
+                type: 'loop',
+                perPage: 3,
+              },
+              425: {
+                autoWidth: true,
+                type: 'loop',
+                perPage: 1,
+              },
+            },
+          }).mount();
+        }
+      });
+    </script>
   </body>
 </html>
