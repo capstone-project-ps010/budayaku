@@ -30,14 +30,14 @@ class BudayakuController extends Controller
             'kalimantan' => DB::table('budayaku')->where('pulau', 'kalimantan')->get(),
         ];
 
-        return view('pulau.kalimantan',$data);
+        return view('pulau.kalimantan.index',$data);
     }
 
     function pulauSumatra() {
         $data = [
             'sumatra' => DB::table('budayaku')->where('pulau', 'sumatra')->get(),
         ];
-        return view('pulau.sumatra',$data);
+        return view('pulau.sumatra.index',$data);
     }
 
     function pulauPapua() {
@@ -45,7 +45,7 @@ class BudayakuController extends Controller
             'papua' => DB::table('budayaku')->where('pulau', 'papua')->get(),
         ];
 
-        return view('pulau.papua',$data);
+        return view('pulau.papua.index',$data);
     }
 
     function pulauSulawesi() {
@@ -53,45 +53,21 @@ class BudayakuController extends Controller
             'sulawesi' => DB::table('budayaku')->where('pulau', 'sulawesi')->get(),
         ];
 
-        return view('pulau.',$data);
+        return view('pulau.sulawesi.index',$data);
     }
 
-    function store(Request $request) {
-
-        $suku = $request->suku . '.' . $request->suku->extension();
-        Storage::putFileAs('public/suku', $request->suku, $suku);
-        $senjata = $request->senjata . '.' . $request->senjata->extension();
-        Storage::putFileAs('public/senjata', $request->senjata, $senjata);
-        $rumah_adat = $request->rumah_adat . '.' . $request->rumah_adat->extension();
-        Storage::putFileAs('public/rumah_adat', $request->rumah_adat, $rumah_adat);
-        $pakaian_adat = $request->pakaian_adat . '.' . $request->pakaian_adat->extension();
-        Storage::putFileAs('public/pakaian_adat', $request->pakaian_adat, $pakaian_adat);
-        $seni = $request->seni . '.' . $request->seni->extension();
-        Storage::putFileAs('public/seni', $request->seni, $seni);
+    function suku($id_budaya) {
+        $query = DB::table('budayaku')->where('id_budaya', $id_budaya)->first();
         $data = [
-            'pulau' => $request->pulau,
-            'suku' => $suku,
-            'senjata'    => $senjata,
-            'rumah_adat'  => $rumah_adat,
-            'pakaian_adat'    => $pakaian_adat,
-            'seni'     => $seni,
-            'bahasa'    => $request->input('bahasa')
+            'suku' => $query
         ];
 
-        budayaku::UpdateOrCreate(
-            ['id_budaya'   => $request->id],
-            $data
-        );
-        return redirect()->route('budayaku')->with('sucess','berhasl di tambah');
+        return view('suku',$data);
+    }
+    
+    function pengajuan() {
         
+        return view('feedback.pengajuan');
     }
-
-    public function destroy($id)
-    {
-        $budayaku = budayaku::findOrfail($id);
-        $budayaku->delete();
-        // Storage::delete('public/gambar/' . $budayaku->gambar);
-
-        return redirect()->route('budayaku')->with('mesage','data berhasil di hapus');
-    }
+    
 }

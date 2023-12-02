@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{{ asset('build/assets/logo/logo12.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('build/assets/style.css') }}" />
     <link
       rel="stylesheet"
@@ -22,38 +23,41 @@
       <h1>Log In to BudayaKu</h1>
       <div class="login-item">
         <form method="POST" action="{{ route('login') }}">
-            @csrf
-
+          @csrf
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"
               >Email address</label
             >
             <input
-            id="email" name="email" :value="old('email')" required autofocus autocomplete="username"
               type="email"
+              name="email"
               class="form-control"
+              id="exampleInputEmail1"
               aria-describedby="emailHelp"
+              autofocus
               required />
+              <x-input-error :messages="$errors->get('email')" class="mt-2" />
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"
               >Password</label
             >
             <input
-            id="password"
-            type="password"
-            name="password"
-            required autocomplete="current-password"
+              type="password"
+              name="password"
               class="form-control"
+              id="exampleInputPassword1"
               required />
-              <x-input-error :messages="$errors->get('email')" class="mt-2" />
+              <x-input-error :messages="$errors->get('password')" class="mt-2" />
           </div>
           <div class="mb-3">
             <button type="submit" class="login-register__submit">Log In</button>
           </div>
           <p>
             Belum punya Akun?
-            <a class="register-now" href="./register.html">Daftar Sekarang</a>
+            <a class="login-register__now" href="{{ route('register') }}"
+              >Daftar Sekarang</a
+            >
           </p>
         </form>
         <div class="login-line"></div>
@@ -72,10 +76,12 @@
             Log In with Google
           </button>
         </div>
+        <a href="{{ route('dashboard') }}">Dashboard</a>
       </div>
     </div>
   </body>
 </html>
+
 
 
 

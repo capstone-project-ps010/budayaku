@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\budayaku;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -16,8 +17,6 @@ class AdminController extends Controller
     {
         $data = [
             'budaya' => budayaku::all()
-
-
         ];
         return view('admin.index');
     }
@@ -32,16 +31,45 @@ class AdminController extends Controller
         //
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    function store(Request $request) {
+
+        $gambar = $request->gambar . '.' . $request->gambar->extension();
+        Storage::putFileAs('public/gambar/gambar', $request->gambar, $gambar);
+        $senjata = $request->senjata . '.' . $request->senjata->extension();
+        Storage::putFileAs('public/gambar/senjata', $request->senjata, $senjata);
+        $rumah_adat = $request->rumah_adat . '.' . $request->rumah_adat->extension();
+        Storage::putFileAs('public/gambar/rumah', $request->rumah_adat, $rumah_adat);
+        $pakaian_adat = $request->pakaian_adat . '.' . $request->pakaian_adat->extension();
+        Storage::putFileAs('public/gambar/pakaian', $request->pakaian_adat, $pakaian_adat);
+        $seni = $request->seni . '.' . $request->seni->extension();
+        Storage::putFileAs('public/gambar/seni', $request->seni, $seni);
+        $data = [
+            'pulau' => $request->pulau,
+            'suku' => $request->suku,
+            'gambar' => $gambar,
+            'deskripsi' => $request->deskripsi,
+            'senjata'    => $senjata,
+            'rumah_adat'  => $rumah_adat,
+            'pakaian_adat'    => $pakaian_adat,
+            'seni'     => $seni,
+            'bahasa'    => $request->input('bahasa')
+        ];
+
+        budayaku::UpdateOrCreate(
+            ['id_budaya'   => $request->id],
+            $data
+        );
+        return redirect()->route('budayaku')->with('sucess','berhasl di tambah');
+        
     }
+
 
     /**
      * Display the specified resource.
@@ -83,8 +111,12 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_budaya)
     {
-        //
+        $budayaku = budayaku::findOrfail($id_budaya);
+        $budayaku->delete();
+        Storage::delete('public/gambar/' . $budayaku->gambar);
+
+        return redirect()->route('budayaku')->with('mesage','data berhasil di hapus');
     }
 }

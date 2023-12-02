@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{{ asset('build/assets/logo/logo12.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('build/assets/style.css') }}" />
     <link
       rel="stylesheet"
@@ -15,12 +16,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
-    
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     <title>BudayaKu</title>
   </head>
   <body>
-    <div class="container-register">
+    <div class="container-register body-register">
       <div class="overlay-register"></div>
       <img
         src="https://s3-alpha-sig.figma.com/img/4e1b/275c/9b455c774d660fb6f7a4155c6a99e431?Expires=1702252800&Signature=kNIGXXiLTMjD4gN3sFLci97dTtf-pg8zYEwDnyMBNhc~k1FOrFrR8tRKg67qtOgfXIMtsIRyTG7GpZ9f8se39vww9hWPE42BN~X8SODOf8-KRR50aQ7jJm8K5Dh5drWKMwUQ7mxceCQvBVUU5DB25zo2aiI97L-jX0affGJuL2zWmVmDQ9lWFDpUjdI6g~bnOdPHD8OxbuBZY6U~IqIoPK08nFOtI6U9b~EK7moTKzLfJ-RlbnUvY5EksUxmXgUwt8YQ36YawxfOJvS59yJ9XR1TwHzkv5rAOxZUUYEgCeyO2zaQFzVzIHjpJIRwjkCDzk9oviUPM92FCRUPJvcDbw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -28,39 +28,50 @@
       <div class="register-item">
         <h1>Register to BudayaKu</h1>
         <form method="POST" action="{{ route('register') }}">
-             @csrf
+          @csrf
           <div class="mb-3">
             <label for="name" class="form-label">Nama</label>
-            <input type="text" name="name" :value="old('name')" required autofocus autocomplete="name" class="form-control" id="name" />
+            <input type="text" name="name" class="form-control" id="name" value="{{ old('name') }}" autofocus/>
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" name="email" :value="old('email')" required autocomplete="username" class="form-control" id="email" />
+            <input type="email" name="email" class="form-control" id="email" value="{{ old('email') }}"/>
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" name="password" required autocomplete="new-password" class="form-control" id="password" />
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              id="password" />
           </div>
-          <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
+          <div class="mb-3">
+            <label for="password_confirmation" class="form-label">Confirm Password</label>
+            <input
+              type="password"
+              name="password_confirmation"
+              class="form-control"
+              id="password_confirmation" />
+          </div>
           <div class="mb-3">
             <button type="submit" class="login-register__submit">
-             {{ __('Register') }}
+              Register
             </button>
           </div>
+          <p>
+            Sudah punya Akun?
+            <a class="login-register__now" href="{{ route('login') }}"
+              >Masuk Sekarang</a
+            >
+          </p>
         </form>
       </div>
     </div>
   </body>
 </html>
+
 
 
 

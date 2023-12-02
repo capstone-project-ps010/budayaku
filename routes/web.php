@@ -17,28 +17,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('budayaku');
 });
 
 //Route Regist to Dashboard
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return view('budayaku');
+})->name('dashboard');
 
 //Route view Users
 Route::get('/jawa',[BudayakuController::class,'pulauJawa'])->name('jawa');
-Route::get('/sumatra',[BudayakuController::class,'pulauSumatra']);
-Route::get('/kalimantan',[BudayakuController::class,'pulauKalimantan']);
-Route::get('/sulawesi',[BudayakuController::class,'pulauSulawesi']);
-Route::get('/papua',[BudayakuController::class,'pulauPapua']);
+Route::get('/sumatra',[BudayakuController::class,'pulauSumatra'])->name('sumatra');
+Route::get('/kalimantan',[BudayakuController::class,'pulauKalimantan'])->name('kalimantan');
+Route::get('/sulawesi',[BudayakuController::class,'pulauSulawesi'])->name('sulawesi');
+Route::get('/papua',[BudayakuController::class,'pulauPapua'])->name('papua');
+Route::get('/suku/{id_budaya}',[BudayakuController::class,'suku'])->name('suku');
+Route::get('/pengajuan',[BudayakuController::class, 'pengajuan'])->name('pengajuan');
+Route::get('/about_us',[BudayakuController::class,'about_us'])->name('about_us');
 
 
 
 //Route View Admin
 Route::middleware(['auth','admin'])->group(function () {
     Route::get('/admin', [AdminController::class,'index']);
-
-
 });
 
 
