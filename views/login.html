@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/logo12.png" type="image/x-icon" />
     <link rel="stylesheet" href="./../style.css" />
     <link
       rel="stylesheet"
@@ -15,10 +16,25 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="../components/header-bar.js"></script>
+    <script src="../components/footer-bar.js"></script>
+    <script src="../utils/views-search.js"></script>
     <title>BudayaKu</title>
   </head>
   <body class="body-login">
     <div class="container-login">
+      <button class="back-login" type="button" onclick="window.history.back()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          viewBox="0 0 26 26"
+          fill="none">
+          <path
+            d="M14.2848 22.5188L13.2008 23.6028C12.7419 24.0618 11.9997 24.0618 11.5456 23.6028L2.05338 14.1155C1.59439 13.6565 1.59439 12.9143 2.05338 12.4602L11.5456 2.96802C12.0045 2.50903 12.7467 2.50903 13.2008 2.96802L14.2848 4.052C14.7487 4.51587 14.7389 5.27271 14.2653 5.72681L8.3815 11.3323H22.4147C23.0641 11.3323 23.5866 11.8547 23.5866 12.5042V14.0667C23.5866 14.7161 23.0641 15.2385 22.4147 15.2385H8.3815L14.2653 20.844C14.7438 21.2981 14.7536 22.0549 14.2848 22.5188Z"
+            fill="black" />
+        </svg>
+      </button>
       <h1>Log In to BudayaKu</h1>
       <div class="login-item">
         <form method="POST">
