@@ -752,10 +752,6 @@ aside h5 {
     background: linear-gradient(45deg, #ffd7d7, #ff4f4f);
 }
 
-.color-5 {
-    background: linear-gradient(45deg, #9fc3ff, #0a6fff);
-}
-
 .admin-add {
     margin-top: 3rem;
     margin-bottom: 1rem;
@@ -767,6 +763,31 @@ aside h5 {
     background-color: #00DFA2;
     font-weight: 500;
     color: #000 !important;
+}
+
+tr.table-yellow th {
+    background-color: #f2ff7c;
+}
+
+td.action-button {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+td a {
+    text-align: unset !important;
+    padding: .5rem !important;
+    padding-inline: 1rem !important;
+    border-radius: 10px !important;
+}
+
+td a.edit {
+    background-color: #1794ff;
+}
+
+td a.delete {
+    background-color: #ff0000;
 }
 
 @media screen and (max-width: 1024px) {
