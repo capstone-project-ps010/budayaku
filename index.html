@@ -17,6 +17,7 @@
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="./utils/search.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>BudayaKu</title>
   </head>
   <body>
@@ -129,141 +130,145 @@
     </nav>
     <div class="container-xxl">
       <main>
-        <div class="hero">
-          <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <iframe
-                  src="https://www.youtube.com/embed/4pU73psmtPQ?si=9HuvVAbuq5GARDda"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen>
-                </iframe>
+        <div data-aos="fade-down">
+          <div class="hero">
+            <div id="carouselExample" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <iframe
+                    src="https://www.youtube.com/embed/4pU73psmtPQ?si=9HuvVAbuq5GARDda"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+                <div class="carousel-item">
+                  <iframe
+                    src="https://www.youtube.com/embed/cbD_yqfYx9g?si=ky-JcOsOklp_ese5"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+                <div class="carousel-item">
+                  <iframe
+                    src="https://www.youtube.com/embed/dUGBT2n0YLA?si=PKe8pTYNe-jhjVX8"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                  </iframe>
+                </div>
               </div>
-              <div class="carousel-item">
-                <iframe
-                  src="https://www.youtube.com/embed/cbD_yqfYx9g?si=ky-JcOsOklp_ese5"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              <div class="carousel-item">
-                <iframe
-                  src="https://www.youtube.com/embed/dUGBT2n0YLA?si=PKe8pTYNe-jhjVX8"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen>
-                </iframe>
-              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev">
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next">
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="prev">
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="next">
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
         </div>
-        <article>
-          <h1>Explore Island</h1>
-          <section class="splide" aria-label="Placeholder Example">
-            <ul class="splide__pagination"></ul>
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide">
-                  <a
-                    data-bs-toggle="collapse"
-                    href="#jawa"
-                    role="button"
-                    aria-expanded="false"
-                    aria-controls="jawa">
-                    <div class="overlay-pulau"></div>
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/5593/9408/667c7cf4df0439655013cd9acb297b42?Expires=1701648000&Signature=VnrQU6ATLJGe0M3BGk27riY99VvLHyjG7GyMn~FYhW53f9Xm1gOM4qeVTAeD1ny9jYKq5y32hwIAWk7lNpvktDbO3KUuuhZKCbxvJtdeuAV4w6mR2eyv1gMc7YrbRtUNASG~RDBsQIdCDSA2TyBzpmYFmGgWULV7A4RLQaKlFYYTjf3nUst3lJTFarDOJPdvZtYKScMT~LFkH2-iXcHRzakmsp4tMBZUZ2sJWcdq8G7rTDgTL-eyQtd~0p57YLB8bJwUzUhhPsaZQq~KX88MeeE~gJts4FF0ohM9z~8iaHzO1aiFY1toMKa1oSMoxfuZKLSMzymX0so67UAevgUc~w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                      alt="" />
-                    <p class="text-pulau__item">Jawa</p>
-                  </a>
-                </li>
-                <li class="splide__slide">
-                  <a
-                    data-bs-toggle="collapse"
-                    href="#kalimantan"
-                    role="button"
-                    aria-expanded="false"
-                    aria-controls="kalimantan">
-                    <div class="overlay-pulau"></div>
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/6e5d/e013/a8d1c465b17ef55a6ae0bfbdcde09cb9?Expires=1701648000&Signature=bcp0sN3-U-KWOp2WG4cCZhjFMpA1bRRkjsXPFFxkMAgYOy4FKKTLyZx-pLmDG1Cs2IG597GXhLOP2lTedy4m4G~Um3w-G2eCbf3V7Xi6GLI-bHPZb9FZw6fuFdQhNNSGAiiDK5njDyyK1t7Qe6ue9vqVJPl6DNNydCunOA0kHncquJltrWKq~ZIT6tScbFCPciNqehjHA3hYqdDj3h33fO4UDVmyXZPa-jewtomF61fAY4~LRz5P2TgfwVbxEadOjAkfre9VwvUaCkMuPRFG4QRnVY6PI4B41rFNSkYCpLDovzz-5BsnkjjSW9k88zt6tsd7h5PntfUxS8HnSehMAA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                      alt="" />
-                    <p class="text-pulau__item">Kalimantan</p>
-                  </a>
-                </li>
-                <li class="splide__slide">
-                  <a
-                    data-bs-toggle="collapse"
-                    href="#sumatera"
-                    role="button"
-                    aria-expanded="false"
-                    aria-controls="sumatera">
-                    <div class="overlay-pulau"></div>
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/3395/2de1/f77a435b9659c8d9e2e1994e4cd6b3bd?Expires=1701648000&Signature=orPt22recgMfboLjtJh0XuCpyvW2RAOEbjCIcpm-3ATkgrwQfya2w3zD9wLiB1OohM1zSCokp-J5tlMpIQ-C6X8b7uCZJholWhidMU35PuBKpwfBorMaoCOTTSRZbJdhqcET-GAnDJmk3vUS5KYzs~HZ2K30Yfd9~wMdSHPAeFC473DZjlRWeURCIarjQz-JAvV2VTjRFmtONs-98FWXkwbERCuPnryThlwvueJzOPXUqESQqc5cYhR4x3WIcqDzeabA4UQVB0QLD6dE1zuNzGV7hJPBBFZ4TX0Dm1DjevBkF30hsKXqiKKdciaJ9TgAbkxLxBALG4vSsu8dsvCsjQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                      alt="" />
-                    <p class="text-pulau__item">Sumatera</p>
-                  </a>
-                </li>
-                <li class="splide__slide">
-                  <a
-                    data-bs-toggle="collapse"
-                    href="#sulawesi"
-                    role="button"
-                    aria-expanded="false"
-                    aria-controls="sulawesi">
-                    <div class="overlay-pulau"></div>
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/bde7/719c/af62acd593af3fc21de9c3e53a457799?Expires=1701648000&Signature=MAI7kpBAHJiYJx40bX4LWGAqcV1bd0jN7--A8c3MhO3sVIzHQk5GE-0Jfym50OhACRIFSIf8v6rSSRUx81w6OqxmJC4-r6DmiRXnHfEsIY1W~PevYOH4dVOQN0hzDSCKbzvzfCqX~EaeNz51TlnaOg3ATFy3R1W0~HvHBWQ25tPkVVvenQoeTuc3ZelRjyJBA1vjmKqVRHN7KcxKo9HNulKqXYptOvai2qhWQUfnLs-syZw-zFDIP4CwwEDFaNpRZNxc0Ch3WCsbP3-L3LEzgrkMCM43qJKUswigA8vBkQGDyBLbLzYanaZQkMdpKV7xc6hH5KsOC9EkYlvg51UUcA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                      alt="" />
-                    <p class="text-pulau__item">Sulawesi</p>
-                  </a>
-                </li>
-                <li class="splide__slide">
-                  <a
-                    data-bs-toggle="collapse"
-                    href="#papua"
-                    role="button"
-                    aria-expanded="false"
-                    aria-controls="papua">
-                    <div class="overlay-pulau"></div>
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/4f1c/40fd/dd39f503a2eeb1d98dcf0eb94ed5f7cd?Expires=1701648000&Signature=JkDaPyfi4W7UfjyFVE2evK~AO9D7kESBOptDMD-b9wyA2Y-kvLn4RFeQt6VJ7Zif0uuFKgoBGmERSHGSM4xwPmBRjU9rPQLakNo8EWm-CUAkt4crtKVI1DlVI~IF~Rz99qUbhc5FlRUm1oJ1M20FpZCLP3ijhlyhJ1Xq8~v0TwS57XqumHs-ev1lJ~Ygl9W1Yua6cPGAhs~yNNavNX2vV~WnYhlGKTkocmCja77OcivFHlwF7h6u0CsWWQP5xl1oQbmwChuddrQz9Gg0Ytz5tax2dtmkfMUiwz3Gf1weEHxRSZT7HNNpt-wUVBc9NpdpOrz5UBeukX2izEGAEmzJZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                      alt="" />
-                    <p class="text-pulau__item">Papua</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <div data-aos="fade-up">
+          <article>
+            <h1>Explore Island</h1>
+            <section class="splide" aria-label="Placeholder Example">
+              <ul class="splide__pagination"></ul>
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <a
+                      data-bs-toggle="collapse"
+                      href="#jawa"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="jawa">
+                      <div class="overlay-pulau"></div>
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/5593/9408/667c7cf4df0439655013cd9acb297b42?Expires=1701648000&Signature=VnrQU6ATLJGe0M3BGk27riY99VvLHyjG7GyMn~FYhW53f9Xm1gOM4qeVTAeD1ny9jYKq5y32hwIAWk7lNpvktDbO3KUuuhZKCbxvJtdeuAV4w6mR2eyv1gMc7YrbRtUNASG~RDBsQIdCDSA2TyBzpmYFmGgWULV7A4RLQaKlFYYTjf3nUst3lJTFarDOJPdvZtYKScMT~LFkH2-iXcHRzakmsp4tMBZUZ2sJWcdq8G7rTDgTL-eyQtd~0p57YLB8bJwUzUhhPsaZQq~KX88MeeE~gJts4FF0ohM9z~8iaHzO1aiFY1toMKa1oSMoxfuZKLSMzymX0so67UAevgUc~w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="" />
+                      <p class="text-pulau__item">Jawa</p>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a
+                      data-bs-toggle="collapse"
+                      href="#kalimantan"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="kalimantan">
+                      <div class="overlay-pulau"></div>
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/6e5d/e013/a8d1c465b17ef55a6ae0bfbdcde09cb9?Expires=1701648000&Signature=bcp0sN3-U-KWOp2WG4cCZhjFMpA1bRRkjsXPFFxkMAgYOy4FKKTLyZx-pLmDG1Cs2IG597GXhLOP2lTedy4m4G~Um3w-G2eCbf3V7Xi6GLI-bHPZb9FZw6fuFdQhNNSGAiiDK5njDyyK1t7Qe6ue9vqVJPl6DNNydCunOA0kHncquJltrWKq~ZIT6tScbFCPciNqehjHA3hYqdDj3h33fO4UDVmyXZPa-jewtomF61fAY4~LRz5P2TgfwVbxEadOjAkfre9VwvUaCkMuPRFG4QRnVY6PI4B41rFNSkYCpLDovzz-5BsnkjjSW9k88zt6tsd7h5PntfUxS8HnSehMAA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="" />
+                      <p class="text-pulau__item">Kalimantan</p>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a
+                      data-bs-toggle="collapse"
+                      href="#sumatera"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="sumatera">
+                      <div class="overlay-pulau"></div>
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/3395/2de1/f77a435b9659c8d9e2e1994e4cd6b3bd?Expires=1701648000&Signature=orPt22recgMfboLjtJh0XuCpyvW2RAOEbjCIcpm-3ATkgrwQfya2w3zD9wLiB1OohM1zSCokp-J5tlMpIQ-C6X8b7uCZJholWhidMU35PuBKpwfBorMaoCOTTSRZbJdhqcET-GAnDJmk3vUS5KYzs~HZ2K30Yfd9~wMdSHPAeFC473DZjlRWeURCIarjQz-JAvV2VTjRFmtONs-98FWXkwbERCuPnryThlwvueJzOPXUqESQqc5cYhR4x3WIcqDzeabA4UQVB0QLD6dE1zuNzGV7hJPBBFZ4TX0Dm1DjevBkF30hsKXqiKKdciaJ9TgAbkxLxBALG4vSsu8dsvCsjQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="" />
+                      <p class="text-pulau__item">Sumatera</p>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a
+                      data-bs-toggle="collapse"
+                      href="#sulawesi"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="sulawesi">
+                      <div class="overlay-pulau"></div>
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/bde7/719c/af62acd593af3fc21de9c3e53a457799?Expires=1701648000&Signature=MAI7kpBAHJiYJx40bX4LWGAqcV1bd0jN7--A8c3MhO3sVIzHQk5GE-0Jfym50OhACRIFSIf8v6rSSRUx81w6OqxmJC4-r6DmiRXnHfEsIY1W~PevYOH4dVOQN0hzDSCKbzvzfCqX~EaeNz51TlnaOg3ATFy3R1W0~HvHBWQ25tPkVVvenQoeTuc3ZelRjyJBA1vjmKqVRHN7KcxKo9HNulKqXYptOvai2qhWQUfnLs-syZw-zFDIP4CwwEDFaNpRZNxc0Ch3WCsbP3-L3LEzgrkMCM43qJKUswigA8vBkQGDyBLbLzYanaZQkMdpKV7xc6hH5KsOC9EkYlvg51UUcA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="" />
+                      <p class="text-pulau__item">Sulawesi</p>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a
+                      data-bs-toggle="collapse"
+                      href="#papua"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="papua">
+                      <div class="overlay-pulau"></div>
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/4f1c/40fd/dd39f503a2eeb1d98dcf0eb94ed5f7cd?Expires=1701648000&Signature=JkDaPyfi4W7UfjyFVE2evK~AO9D7kESBOptDMD-b9wyA2Y-kvLn4RFeQt6VJ7Zif0uuFKgoBGmERSHGSM4xwPmBRjU9rPQLakNo8EWm-CUAkt4crtKVI1DlVI~IF~Rz99qUbhc5FlRUm1oJ1M20FpZCLP3ijhlyhJ1Xq8~v0TwS57XqumHs-ev1lJ~Ygl9W1Yua6cPGAhs~yNNavNX2vV~WnYhlGKTkocmCja77OcivFHlwF7h6u0CsWWQP5xl1oQbmwChuddrQz9Gg0Ytz5tax2dtmkfMUiwz3Gf1weEHxRSZT7HNNpt-wUVBc9NpdpOrz5UBeukX2izEGAEmzJZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="" />
+                      <p class="text-pulau__item">Papua</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-            <!-- default location -->
-          </section>
-        </article>
+              <!-- default location -->
+            </section>
+          </article>
+        </div>
         <article>
           <div class="collapse" id="jawa">
             <h1>Jawa</h1>
@@ -429,6 +434,10 @@
           }).mount();
         }
       });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>

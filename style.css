@@ -351,6 +351,13 @@ p.text-pulau {
     border-radius: 10px;
 }
 
+.title-pulau {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 section.splide {
     padding-inline: 3rem;
     width: 110%;
