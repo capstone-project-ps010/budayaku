@@ -61,8 +61,8 @@ h4 {
 
 form svg {
     position: absolute;
-    bottom: 18px;
-    left: 260px;
+    bottom: 17px;
+    left: 265px;
 }
 
 input[type=search] {
@@ -85,9 +85,7 @@ header {
     align-items: center;
     background-color: #F4D35E;
     padding-block: .3rem;
-    margin-left: -1rem;
-    margin-right: -5rem;
-    width: 105.5%;
+    width: 100%;
     box-shadow: -1px 1px 10px;
 }
 
@@ -492,9 +490,7 @@ p.text-suku {
 }
 
 footer {
-    width: 105.5%;
-    margin-left: -1rem;
-    margin-right: -5rem;
+    width: 100%;
     margin-top: 3rem;
     padding: 1rem;
     padding-inline: 3rem;
@@ -551,8 +547,7 @@ footer {
     display: flex;
     justify-content: center;
     padding-block: .5rem;
-    margin-left: -1rem;
-    width: 105.5%;
+    width: 100%;
 }
 
 .copyright p {
@@ -835,9 +830,9 @@ td a.delete {
         position: absolute;
         flex-direction: column !important;
         top: 60px;
-        width: 99%;
-        background-color: #fff;
+        width: 100%;
         margin-left: -4rem;
+        background-color: #fff;
     }
 
     .navbar-collapse.collapsing {
@@ -846,9 +841,9 @@ td a.delete {
         position: absolute;
         flex-direction: column !important;
         top: 60px;
-        width: 99%;
-        background-color: #fff;
+        width: 100%;
         margin-left: -4rem;
+        background-color: #fff;
     }
 
     .detail-island {
@@ -901,7 +896,7 @@ td a.delete {
 
     form svg {
         bottom: 70px;
-        left: 230px;
+        left: 235px;
     }
 
     ol, ul {
@@ -961,12 +956,12 @@ td a.delete {
     }
 
     .collapse.header {
-        width: 96%;
+        width: 100%;
         margin-left: -2rem;
     }
 
     .navbar-collapse.collapsing {
-        width: 96%;
+        width: 100%;
         margin-left: -2rem;
     }
 
@@ -1032,7 +1027,7 @@ td a.delete {
     }
 
     form svg {
-        left: 55px;
+        left: 65px;
     }
 
     .logo img.text-logo {
@@ -1121,7 +1116,7 @@ td a.delete {
 
 @media screen and (max-width: 375px) {
     form svg {
-        left: 35px;
+        left: 40px;
     }
 
     .carousel-control-prev {
