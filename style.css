@@ -29,6 +29,11 @@ h4 {
     color: #0D3B66 !important;
 }
 
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -81,7 +86,8 @@ header {
     background-color: #F4D35E;
     padding-block: .3rem;
     margin-left: -1rem;
-    width: 102%;
+    margin-right: -5rem;
+    width: 105.5%;
     box-shadow: -1px 1px 10px;
 }
 
@@ -486,8 +492,9 @@ p.text-suku {
 }
 
 footer {
-    width: 102%;
+    width: 105.5%;
     margin-left: -1rem;
+    margin-right: -5rem;
     margin-top: 3rem;
     padding: 1rem;
     padding-inline: 3rem;
@@ -545,7 +552,7 @@ footer {
     justify-content: center;
     padding-block: .5rem;
     margin-left: -1rem;
-    width: 102%;
+    width: 105.5%;
 }
 
 .copyright p {
