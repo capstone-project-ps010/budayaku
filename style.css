@@ -799,6 +799,15 @@ td a.delete {
     background-color: #ff0000;
 }
 
+.button-send {
+    padding: .5rem;
+    padding-inline: 1.5rem;
+    background-color: #0D3B66;
+    border: 0;
+    color: #fff;
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 1024px) {
     #carouselImage .carousel-control-prev {
         left: 10% !important;
