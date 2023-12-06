@@ -10,7 +10,7 @@ class budayaku extends Model
     use HasFactory;
 
     protected $table = 'budayaku';
-    protected $id = 'id_budaya';
+    protected $primaryKey = 'id_budaya';
 
     protected $fillable = [
         'pulau',
@@ -18,9 +18,13 @@ class budayaku extends Model
         'gambar',
         'deskripsi',
         'senjata',
+        'gambar_rumah_adat',
         'rumah_adat',
+        'gambar_rumah_adat',
         'pakaian_adat',
+        'gambar_pakaian_adat',
         'seni',
+        'gambar_seni',
         'bahasa'
     ];
 

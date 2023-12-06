@@ -20,7 +20,6 @@ class AdminMiddleware
         if ($request->user()->role == User::ROLE_ADMIN) {
             return $next($request);
         }
-    
-        abort(401);
+        return back();
     }
 }

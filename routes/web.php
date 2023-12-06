@@ -39,7 +39,11 @@ Route::get('/about_us',[BudayakuController::class,'about_us'])->name('about_us')
 
 //Route View Admin
 Route::middleware(['auth','admin'])->group(function () {
-    Route::get('/admin', [AdminController::class,'index']);
+    Route::get('/admin', [AdminController::class,'index'])->name('admin');
+    Route::get('/create',[AdminController::class,'create'])->name('create');
+    Route::post('/budaya/store',[AdminController::class,'store'])->name('add_data');
+    Route::get('/budaya/edit/{id_budaya}',[AdminController::class ,'edit']);
+    Route::get('/budaya/destroy/{id_budaya}',[AdminController::class ,'destroy']);
 });
 
 

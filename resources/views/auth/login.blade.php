@@ -20,6 +20,7 @@
   </head>
   <body class="body-login">
     <div class="container-login">
+      <a href="{{ route('dashboard') }}">Dashboard</a>
       <h1>Log In to BudayaKu</h1>
       <div class="login-item">
         <form method="POST" action="{{ route('login') }}">
@@ -76,7 +77,6 @@
             Log In with Google
           </button>
         </div>
-        <a href="{{ route('dashboard') }}">Dashboard</a>
       </div>
     </div>
   </body>

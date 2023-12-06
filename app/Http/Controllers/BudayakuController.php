@@ -69,5 +69,9 @@ class BudayakuController extends Controller
         
         return view('feedback.pengajuan');
     }
+
+    function about_us()  {
+        return view('about_us');
+    }
     
 }
