@@ -108,14 +108,14 @@ button.dropdown-toggle {
     color: #0D3B66;
 }
 
-.user {
+button.user {
     background-color: #0D3B66;
     padding-inline: 1.5rem;
     padding-block: .3rem;
     border-radius: 35px;
 }
 
-.user a {
+.user {
     font-weight: 500;
     color: #fff !important;
 }
@@ -806,6 +806,10 @@ td a.delete {
     border: 0;
     color: #fff;
     border-radius: 10px;
+}
+
+form.pengajuan {
+    width: 70%;
 }
 
 @media screen and (max-width: 1024px) {

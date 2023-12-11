@@ -9,9 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/f5ed80d948.js"
-      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
@@ -19,7 +17,10 @@
     <script src="../components/header-bar.js"></script>
     <script src="../components/footer-bar.js"></script>
     <script src="../utils/views-search.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css"
+      rel="stylesheet" />
     <title>BudayaKu</title>
   </head>
   <body>
@@ -214,7 +215,7 @@
                 </p>
               </div>
               <div class="feedback-form">
-                <form method="POST">
+                <form method="POST" id="feedback-form">
                   <div class="mb-3">
                     <label for="nameFeedback" class="form-label">Nama</label>
                     <input
@@ -228,21 +229,17 @@
                     <label for="feedbackComment" class="form-label"
                       >Feedback</label
                     >
-                    <textarea name="feedback" class="form-control"></textarea>
+                    <textarea
+                      name="feedback"
+                      class="form-control"
+                      required></textarea>
                   </div>
                   <div class="feedback-verified">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckDefault" />
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Jadikan sebagai anonim
-                      </label>
-                    </div>
-                    <div class="mt-5">
-                      <button type="submit" class="feedback-submit">
+                    <div class="mt-3">
+                      <button
+                        type="submit"
+                        id="submit-feedback"
+                        class="feedback-submit">
                         Kirim
                       </button>
                     </div>
@@ -295,6 +292,40 @@
       });
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+    <script>
+      const submitFeedbackButton = document.getElementById('submit-feedback');
+
+      submitFeedbackButton.addEventListener('click', (event) => {
+        // Validasi formulir
+        event.preventDefault();
+        const form = document.getElementById('feedback-form');
+        if (!form.checkValidity()) {
+          event.stopPropagation();
+          Swal.fire({
+            title: 'Terjadi kesalahan!',
+            text: 'Silakan periksa kembali formulir Anda.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+          });
+          return;
+        }
+
+        // Kirim data formulir
+        // ...
+
+        // Tampilkan sweetalert2
+        Swal.fire({
+          title: 'Feedback Terkirim!',
+          text: 'Terima kasih atas feedback Anda!',
+          icon: 'success',
+          confirmButtonText: 'OK',
+        }).then(() => {
+          // Reset form
+          form.reset();
+        });
+      });
+    </script>
     <script>
       AOS.init();
     </script>
