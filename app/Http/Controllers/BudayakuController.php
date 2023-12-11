@@ -17,6 +17,12 @@ class BudayakuController extends Controller
         return view('index',$data);
     }
 
+    function search( Request $request) {
+        $query =   $request->search;
+        $suku = DB::table('budayaku')->where('suku', 'like', "%" . $query . "%")->get();
+        return view('viewsearch', ['suku' => $suku]);
+    }
+
     function pulauJawa() {
         $data = [
             'jawa' => DB::table('budayaku')->where('pulau', 'jawa')->get(),

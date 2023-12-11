@@ -23,6 +23,8 @@
       @guest
       <div class="collapse header navbar-collapse" id="navbarText">
         <form
+        
+        action="{{ route('search') }}"
           class="d-flex"
           role="search"
           id="search-form"
@@ -47,9 +49,11 @@
           <input
             class="form-control me-2"
             type="search"
+            name="search"
             id="search-input"
-            placeholder="Cari Berdasarkan Pulau, Suku"
+            placeholder="Cari Berdasarkan Suku"
             aria-label="Search" />
+            
         </form>
         <div class="list">
           <ul>
@@ -106,6 +110,7 @@
         @can('isAdmin')
         <div class="collapse header navbar-collapse" id="navbarText">
             <form
+            action="{{ route('search') }}"
               class="d-flex"
               role="search"
               id="search-form"
@@ -128,6 +133,7 @@
                 </defs>
               </svg>
               <input
+              name="search"
                 class="form-control me-2"
                 type="search"
                 id="search-input"
@@ -190,6 +196,7 @@
         @elsecan('isUser')
         <div class="collapse header navbar-collapse" id="navbarText">
             <form
+              action="{{ route('search') }}"
               class="d-flex"
               role="search"
               id="search-form"
@@ -212,6 +219,7 @@
                 </defs>
               </svg>
               <input
+                name="search"
                 class="form-control me-2"
                 type="search"
                 id="search-input"

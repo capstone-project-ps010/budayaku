@@ -34,6 +34,7 @@ Route::get('/papua',[BudayakuController::class,'pulauPapua'])->name('papua');
 Route::get('/suku/{id_budaya}',[BudayakuController::class,'suku'])->name('suku');
 Route::get('/pengajuan',[BudayakuController::class, 'pengajuan'])->name('pengajuan');
 Route::get('/about_us',[BudayakuController::class,'about_us'])->name('about_us');
+Route::get('/search',[BudayakuController::class, 'search'])->name('search');
 
 
 

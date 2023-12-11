@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,18 +33,13 @@
         <div data-aos="fade-down">
           <article>
             <h2>Suku {{ $suku->suku }}</h2>
-            <picture>
-              <source
-                srcset="
-                  https://s3-alpha-sig.figma.com/img/314f/1a8a/de4ba34825666539aa7e4a89da495198?Expires=1702252800&Signature=niqRB7KQsJ6V7bPSRnI40xOyGVfw7I2Qg1X7vI~G2QFD-dqixmsNbb35fHPgJ3CUN33SRWENpxkzC8SS~1IO0rnl4BZhrEzmPgjUowj-vQhVvQeZX-5amgGQdOQrDl43CvUZZ4lc0PXg0K1jjvE3w68mFaafYiU5v-HiSy1SrAHV4Vs1hQH1vUzSGNkgixB6yonOCq3j4W4bB0m0SYjMq1YBejoJtQf8BCbWnd7wBeNKfd2a3dLgSzYlzbx-hap3uAhLo97B7OyVzEEtn8I2ay70jVLvPwHRS8FtnkEcqlUHG1hoJ9viUDmqxUVyw99L3UJC2e-ALjH3Rd-ajEmxCw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4
-                " />
+              
               <img
-                src="{{ asset('storage/gambar/suku' . $suku->gambar) }}"
+                src="{{ asset('storage/gambar/suku/' . $suku->gambar) }}"
                 alt=""
                 class="image-suku" />
-            </picture>
             <p class="text-suku">
-              {{ $suku->deskripsi }}
+              {{ $suku->deskripsi }} Dan Bahasa yang di gunakan oleh Suku {{ $suku->suku }} adalah Bahasa {{ $suku->bahasa }}
             </p>
           </article>
         </div>
@@ -60,23 +56,30 @@
                   <li class="splide__slide">
                     <div class="overlay-pulau"></div>
                     <img
-                      src="https://s3-alpha-sig.figma.com/img/d96b/40a9/eaa45238291e93486548889024fa6a99?Expires=1702252800&Signature=noMiUUAV1x91oo0qzhojJVZ4xPMbYuJcXrTP1gVWWl7-KxP35pqQsVvO6S9uH5cFLO0sf~aNfN~5JbDOaNpN3qKlHlK31Glu1Dlq8Ok5I2-dApTysuqvUkf548c6b9k-k2bPC~rlKLlWzyQYIg4nDfW6FGnMPmeJEI7xOY8ws0u4CSt2iz9Oo2SnKdJEHnzNQR8pRt9yFbqgBuTnDxteGiuVI8Hs4TAe~CC~gYokUA8u6Z7G1-M4o7RuNr6vcJn~P1Iii8BjALmN93M0tax5kIpML172LNG926tXLX~4lGA5lfcszJ~OaBiVh34~rw0~rElq4bo5mz30ZoSSA6dEng__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                      src="{{ asset('storage/gambar/pakaian/' . $suku->gambar_pakaian_adat) }}"
                       alt="" />
-                    <p class="text-pulau__item">Pakaian Adat</p>
+                    <p class="text-pulau__item">Pakaian {{ $suku->pakaian_adat }}</p>
                   </li>
                   <li class="splide__slide">
                     <div class="overlay-pulau"></div>
                     <img
-                      src="https://s3-alpha-sig.figma.com/img/0129/aa99/ed3d8a0527c26bfd55fde29049fa72aa?Expires=1702252800&Signature=hPjkrNbCXWT4GZWc0ruOkKwjvi47BkpIEbh~U1SjFUn84LELZBs9lu14NPVN4FQ7UEBYUqmzinwSBrCPUbrcS7nmn4Zdj03W0KwkWwQfXW9O7YEMoVJCNNKIYEt8OaVjBKWQ3rEVYrfPAxtlXBC08WsGOVYWgn-h9rTu~5d8b6d-3~I9WwRrqJWH3S2sYNUInRlW~BzwrnD4GzeIK2eY6JTjVBccashjScIWmHyIkPX3rp7ozfCEwrtM~rndMM-LRORh9jEPcblcyiq26MVUj45CoMnZsRkGKchK9O5SHujQWWo25rCxUU1dYFF~NI4NR1hRDPI~acOCq4MvkY-nZA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                      src="{{ asset('storage/gambar/rumah/' . $suku->gambar_rumah_adat) }}"
                       alt="" />
-                    <p class="text-pulau__item">Rumah Adat</p>
+                    <p class="text-pulau__item">Rumah {{ $suku->rumah_adat }}</p>
                   </li>
                   <li class="splide__slide">
                     <div class="overlay-pulau"></div>
                     <img
-                      src="https://s3-alpha-sig.figma.com/img/5778/69ad/1bdc651668d64fcbc026e5f9c48c247b?Expires=1702252800&Signature=jaz6iRJkxxT09goPX1~znNGhNz7RceKh~olM2kFP2whlI9Dz9~d-jb3ZtbBlwVV7zZepz12cA1RJJlc6tW~kb0Sfbg1lQ9Wx~7IT-MJXsRknHE3UT73vPWwggXs99CrQRWdm2dvi3-QpbiR1t2c0zBrl16RUzDsAIUKrf6t4GViLVYI2Bl6nTjCGNnLPo2UuoYFrLksKMNhrXQQcyMeramZn9TWmSkiILK4PZ3TPhkdi3cPhjaelwysymNmF2y2iTqf3~Wa5547UgXLA-cEAJVVxwWASIFdMpJdMhM3AD0LVyuLkHlHXAKWwayZrsRM1Im6bDVu3diloBYtpfXsZdw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                      src="{{ asset('storage/gambar/seni/' . $suku->gambar_seni) }}"
                       alt="" />
-                    <p class="text-pulau__item">Upacara Sekaten</p>
+                    <p class="text-pulau__item">Kesenian {{ $suku->seni }}</p>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="overlay-pulau"></div>
+                    <img
+                      src="{{ asset('storage/gambar/senjata/' . $suku->gambar_senjata) }}"
+                      alt="" />
+                    <p class="text-pulau__item">Senjata  {{ $suku->senjata }}</p>
                   </li>
                 </ul>
               </div>
