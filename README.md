@@ -11,7 +11,7 @@
     </p>
 <h3>Team ID: C523-PS010</h3>
 <h3>Nama Anggota:</h3>
-<h5 style="margin-left:5px;">1. S171YB405-Aji Putra Ramadhan</h5>
+<h5 style="margin-left:5px;">1. S171YB405 - Aji Putra Ramadhan</h5>
 <h5>2. F171YB055 - Raden Akbar Agung Gumilang</h5>
 <h5>3. F161XB048 - Izwatulhusna Amatulmuiz</h5>
 <h5>4. F639YB394 - Matien Hakim Falahudin Bachtiar</h5>
