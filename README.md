@@ -1,12 +1,20 @@
-<h1 align="center"> Budayaku </h1>
-<h2 align="center">Back-end Aplikasi Menggunakan Framework Budayaku</h2>
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center"> BUDAYAKU </h1>
+<h2 align="center">Capstone Project BudayaKu: Eksplorasi Tradisi, Seni, dan Warisan </h2>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+  <p align="center">
+    BudayaKu adalah sebuah platform yang bertujuan untuk
+    mendokumentasikan, mempromosikan, dan melestarikan budaya dan
+    kekayaan sosial masyarakat Indonesia. Proyek ini
+    dilatarbelakangi oleh keinginan untuk menjaga warisan budaya
+    yang beragam di Indonesia, seperti senjata tradisional, adat
+    istiadat, rumah adat, seni, bahasa, dan banyak lagi.
+    </p>
+<h3>Team ID: C523-PS010</h3>
+<h3>Nama Anggota:</h3>
+<h5 style="margin-left:5px;">1. S171YB405-Aji Putra Ramadhan</h5>
+<h5>2. F171YB055 - Raden Akbar Agung Gumilang</h5>
+<h5>3. F161XB048 - Izwatulhusna Amatulmuiz</h5>
+<h5>4. F639YB394 - Matien Hakim Falahudin Bachtiar</h5>
+<h5>5. F152YB123 - Vinsensius Saputra Jemahan</h5>
 
 
