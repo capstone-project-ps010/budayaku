@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use ErrorException;
 
 class Handler extends ExceptionHandler
 {
@@ -47,4 +48,14 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    public function render($request, Throwable $exception)
+{
+    if ($exception instanceof ErrorException && strpos($exception->getMessage(), 'Attempt to read property') !== false) {
+        // Custom handling for "Attempt to read property on null"
+        return response()->view('errors.custom-null-property', [], 500);
+    }
+
+    return parent::render($request, $exception);
+}
 }

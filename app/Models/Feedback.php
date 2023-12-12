@@ -11,7 +11,6 @@ class Feedback extends Model
 
     protected $table = 'feedback';
     protected $fillable = [
-        'gambar',
         'informasi_detail',
         'status'
     ];

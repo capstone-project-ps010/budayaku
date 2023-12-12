@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -95,15 +94,11 @@
               <div class="feedback-description">
                 <h2>Feedback</h2>
                 <p class="mb-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nobis, maxime sequi similique a, expedita enim doloribus,
-                  eveniet pariatur dignissimos deserunt incidunt officia
-                  quisquam? Culpa nam similique praesentium cumque temporibus.
-                  Rem?
+                  Kami mengharapkan kritik dan saran kepada user agar Kami selaku developer dapat terus mengembangkan aplikasi ini untuk kepentinggan yang berkelanjutan Tanks :)
                 </p>
               </div>
               <div class="feedback-form">
-                <form method="POST">
+                <form id="feedback-form">
                   <div class="mb-3">
                     <label for="nameFeedback" class="form-label">Nama</label>
                     <input
@@ -131,7 +126,7 @@
                       </label>
                     </div>
                     <div class="mt-5">
-                      <button type="submit" class="feedback-submit">
+                      <button type="submit" class="feedback-submit" id="submit-feedback">
                         Kirim
                       </button>
                     </div>
@@ -141,8 +136,8 @@
             </div>
             <div class="feedback-item mt-5">
               <div class="feedback-card">
-                <p>Nama : Raden</p>
-                <p>Feedback : untuk informasinya cukup jelas</p>
+                <p>Nama : Bayu</p>
+                <p>Feedback : untuk informasinya masi banyak yang harus di perbaiki</p>
               </div>
               <div class="feedback-card">
                 <p>Nama : Anonim</p>
@@ -152,7 +147,7 @@
                 </p>
               </div>
               <div class="feedback-card">
-                <p>Nama : Raden</p>
+                <p>Nama : Iza</p>
                 <p>Feedback : untuk informasinya cukup jelas</p>
               </div>
               <div class="feedback-card">
@@ -167,6 +162,7 @@
     <div class="container-fluid">
       @include('layouts.footer')
     </div>
+    
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         var elms = document.getElementsByClassName('splide');
@@ -181,6 +177,40 @@
       });
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+    <script>
+      const submitFeedbackButton = document.getElementById('submit-feedback');
+
+      submitFeedbackButton.addEventListener('click', (event) => {
+        // Validasi formulir
+        event.preventDefault();
+        const form = document.getElementById('feedback-form');
+        if (!form.checkValidity()) {
+          event.stopPropagation();
+          Swal.fire({
+            title: 'Terjadi kesalahan!',
+            text: 'Silakan periksa kembali formulir Anda.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+          });
+          return;
+        }
+
+        // Kirim data formulir
+        // ...
+
+        // Tampilkan sweetalert2
+        Swal.fire({
+          title: 'Feedback Terkirim!',
+          text: 'Terima kasih atas feedback Anda!',
+          icon: 'success',
+          confirmButtonText: 'OK',
+        }).then(() => {
+          // Reset form
+          form.reset();
+        });
+      });
+    </script>
     <script>
       AOS.init();
     </script>

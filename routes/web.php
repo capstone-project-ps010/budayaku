@@ -36,6 +36,10 @@ Route::get('/pengajuan',[BudayakuController::class, 'pengajuan'])->name('pengaju
 Route::get('/about_us',[BudayakuController::class,'about_us'])->name('about_us');
 Route::get('/search',[BudayakuController::class, 'search'])->name('search');
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/pengajuan', [BudayakuController::class,'pengajuan'])->name('pengajuan');
+});
+
 
 
 //Route View Admin
@@ -54,5 +58,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::fallback(function () {
+    return view('errors.404');
 });
 require __DIR__.'/auth.php';

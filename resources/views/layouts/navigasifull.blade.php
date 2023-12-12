@@ -228,6 +228,7 @@
             </form>
             <div class="list">
               <ul>
+                <a href="{{ route('pengajuan') }}">Pengajuan</a>
                 <div class="dropdown">
                   <button
                     class="dropdown-toggle"
