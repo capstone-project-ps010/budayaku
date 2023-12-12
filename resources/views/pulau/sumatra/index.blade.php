@@ -144,10 +144,7 @@
       </main>
     </div>
     <div class="container-fluid">
-      <footer-bar></footer-bar>
-      <div class="copyright">
-        <p>© 2023 BudayaKu</p>
-      </div>
+      @include('layouts.footer')
     </div>
     <script>
       document.addEventListener('DOMContentLoaded', function () {

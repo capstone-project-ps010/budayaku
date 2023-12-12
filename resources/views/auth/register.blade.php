@@ -23,7 +23,7 @@
     <div class="container-register body-register">
       <div class="overlay-register"></div>
       <img
-        src="https://s3-alpha-sig.figma.com/img/4e1b/275c/9b455c774d660fb6f7a4155c6a99e431?Expires=1702252800&Signature=kNIGXXiLTMjD4gN3sFLci97dTtf-pg8zYEwDnyMBNhc~k1FOrFrR8tRKg67qtOgfXIMtsIRyTG7GpZ9f8se39vww9hWPE42BN~X8SODOf8-KRR50aQ7jJm8K5Dh5drWKMwUQ7mxceCQvBVUU5DB25zo2aiI97L-jX0affGJuL2zWmVmDQ9lWFDpUjdI6g~bnOdPHD8OxbuBZY6U~IqIoPK08nFOtI6U9b~EK7moTKzLfJ-RlbnUvY5EksUxmXgUwt8YQ36YawxfOJvS59yJ9XR1TwHzkv5rAOxZUUYEgCeyO2zaQFzVzIHjpJIRwjkCDzk9oviUPM92FCRUPJvcDbw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        src="{{ asset('build/assets/images/Budaya.jpg') }}"
         alt="" />
       <div class="register-item">
         <h1>Register to BudayaKu</h1>

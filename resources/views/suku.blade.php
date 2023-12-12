@@ -94,7 +94,7 @@
               <div class="feedback-description">
                 <h2>Feedback</h2>
                 <p class="mb-3">
-                  Kami mengharapkan kritik dan saran kepada user agar Kami selaku developer dapat terus mengembangkan aplikasi ini untuk kepentinggan yang berkelanjutan Tanks :)
+                  Kami mengharapkan kritik dan saran kepada user agar Kami selaku developer dapat terus mengembangkan aplikasi ini untuk kepentinggan yang berkelanjutan Thanks :)
                 </p>
               </div>
               <div class="feedback-form">

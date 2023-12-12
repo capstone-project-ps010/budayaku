@@ -45,7 +45,7 @@
 <body>
     <div>
         <h1>404 - Not Found</h1>
-        <img src="{{ asset('build/assets/error.jpg') }}" alt="Castle" class="castle-img">
+        <img src="{{ asset('build/assets/error.png') }}" alt="Castle" class="castle-img">
         <p>The page you are looking for might be in another castle!</p>
         <p><a href="{{ url('/') }}">Go Home</a></p>
     </div>

@@ -7,9 +7,6 @@
       {{ Auth::user()->name }}
     </button>
     <ul class="dropdown-menu">
-      <li>
-        <a class="dropdown-item" href="#">Profile</a>
-      </li>
       <form method="POST" action="{{ route('logout') }}">
         @csrf
         <x-dropdown-link :href="route('logout')"

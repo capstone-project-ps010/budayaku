@@ -137,7 +137,7 @@
                 class="form-control me-2"
                 type="search"
                 id="search-input"
-                placeholder="Cari Berdasarkan Pulau, Suku"
+                placeholder="Cari Berdasarkan Suku"
                 aria-label="Search" />
             </form>
             <div class="list">
@@ -223,7 +223,7 @@
                 class="form-control me-2"
                 type="search"
                 id="search-input"
-                placeholder="Cari Berdasarkan Pulau, Suku"
+                placeholder="Cari Berdasarkan Suku"
                 aria-label="Search" />
             </form>
             <div class="list">

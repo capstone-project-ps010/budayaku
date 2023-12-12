@@ -105,7 +105,7 @@
           </article>
     <hr>
           <div class="about-us__card" >
-            <p>Website ini masi dalam pengembangan mohon jika anda menemukan Bug atau masalah lain mohon di maklumi</p>
+            <p>Website ini masih dalam tahap pengembangan jika anda menemukan Bug atau masalah lain mohon di maklumi</p>
             <h4>Salam Hangat Dev BudayaKu :)</h4>
           </div>
         </div>
