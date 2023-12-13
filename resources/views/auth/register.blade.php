@@ -47,6 +47,7 @@
               class="form-control"
               id="password" />
           </div>
+          <x-input-error :messages="$errors->get('password')" class="mt-2" />
           <div class="mb-3">
             <label for="password_confirmation" class="form-label">Confirm Password</label>
             <input

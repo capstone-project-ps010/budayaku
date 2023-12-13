@@ -58,7 +58,7 @@
             <div class="about-us__creator">
               <div class="about-us__card">
                 <img
-                  src="https://www.clipartkey.com/mpngs/m/152-1520367_user-profile-default-image-png-clipart-png-download.png"
+                  src="{{ asset('build/assets/images/Raden.jpg') }}"
                   alt="" />
                 <div class="about-us__body">
                   <p>Raden Akbar Agung Gumilang</p>
@@ -67,7 +67,7 @@
               </div>
               <div class="about-us__card">
                 <img
-                  src="https://www.clipartkey.com/mpngs/m/152-1520367_user-profile-default-image-png-clipart-png-download.png"
+                  src="{{ asset('build/assets/images/Aji.jpg') }}"
                   alt="" />
                 <div class="about-us__body">
                   <p>Aji Putra Ramadhan</p>
@@ -76,7 +76,7 @@
               </div>
               <div class="about-us__card">
                 <img
-                  src="https://www.clipartkey.com/mpngs/m/152-1520367_user-profile-default-image-png-clipart-png-download.png"
+                  src="{{ asset('build/assets/images/Matien.jpg') }}"
                   alt="" />
                 <div class="about-us__body">
                   <p>Matien Hakim Falahudin Bachtiar</p>
@@ -85,7 +85,7 @@
               </div>
               <div class="about-us__card">
                 <img
-                  src="https://www.clipartkey.com/mpngs/m/152-1520367_user-profile-default-image-png-clipart-png-download.png"
+                  src="{{ asset('build/assets/images/Izwah.jpg') }}"
                   alt="" />
                 <div class="about-us__body">
                   <p>Izwatulhusna Amatulmuiz</p>

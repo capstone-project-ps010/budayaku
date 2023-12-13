@@ -143,7 +143,7 @@
                     <a href="/suku/{{ $index->id_budaya }}">
                       <div class="overlay-pulau"></div>
                       <img
-                        src="{{ asset('storage/gambar/suku' . $index->gambar) }}"
+                        src="{{ asset('storage/gambar/suku/' . $index->gambar) }}"
                         alt="" />
                       <p class="text-pulau__item">{{ $index->suku }}</p>
                     </a>

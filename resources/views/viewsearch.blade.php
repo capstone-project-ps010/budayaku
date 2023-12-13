@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,151 +28,144 @@
       @include('layouts.navigasifull')
     </nav>
     <div class="container-xxl">
-        @foreach ($suku as $suku )
-        <main>
-          <div data-aos="fade-down">
-            <article>
-              <h2>Suku {{ $suku->suku }}</h2>
-              <picture>
-                <source
-                  srcset="
-                    https://s3-alpha-sig.figma.com/img/314f/1a8a/de4ba34825666539aa7e4a89da495198?Expires=1702252800&Signature=niqRB7KQsJ6V7bPSRnI40xOyGVfw7I2Qg1X7vI~G2QFD-dqixmsNbb35fHPgJ3CUN33SRWENpxkzC8SS~1IO0rnl4BZhrEzmPgjUowj-vQhVvQeZX-5amgGQdOQrDl43CvUZZ4lc0PXg0K1jjvE3w68mFaafYiU5v-HiSy1SrAHV4Vs1hQH1vUzSGNkgixB6yonOCq3j4W4bB0m0SYjMq1YBejoJtQf8BCbWnd7wBeNKfd2a3dLgSzYlzbx-hap3uAhLo97B7OyVzEEtn8I2ay70jVLvPwHRS8FtnkEcqlUHG1hoJ9viUDmqxUVyw99L3UJC2e-ALjH3Rd-ajEmxCw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4
-                  " />
-                <img
-                  src="{{ asset('storage/gambar/suku' . $suku->gambar) }}"
-                  alt=""
-                  class="image-suku" />
-              </picture>
-              <p class="text-suku">
-                {{ $suku->deskripsi }} Dan Bahasa yang di gunakan oleh Suku {{ $suku->suku }} adalah Bahasa {{ $suku->bahasa }}
-              </p>
-            </article>
-          </div>
-          <div data-aos="fade-right">
-            <article>
-              <h3>Adat Istiadat</h3>
-              <section
-                class="splide"
-                aria-label="Placeholder Example"
-                id="splide1">
-                <ul class="splide__pagination"></ul>
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <div class="overlay-pulau"></div>
-                      <img
-                        src="{{ asset('storage/gambar/pakaian/' . $suku->gambar_pakaian_adat) }}"
-                        alt="" />
-                      <p class="text-pulau__item">Pakaian {{ $suku->pakaian_adat }}</p>
-                    </li>
-                    <li class="splide__slide">
-                      <div class="overlay-pulau"></div>
-                      <img
-                        src="{{ asset('storage/gambar/rumah/' . $suku->gambar_rumah_adat) }}"
-                        alt="" />
-                      <p class="text-pulau__item">Rumah {{ $suku->rumah_adat }}</p>
-                    </li>
-                    <li class="splide__slide">
-                      <div class="overlay-pulau"></div>
-                      <img
-                        src="{{ asset('storage/gambar/seni/' . $suku->gambar_seni) }}"
-                        alt="" />
-                      <p class="text-pulau__item">Kesenian {{ $suku->seni }}</p>
-                    </li>
-                    <li class="splide__slide">
-                      <div class="overlay-pulau"></div>
-                      <img
-                        src="{{ asset('storage/gambar/senjata/' . $suku->gambar_senjata) }}"
-                        alt="" />
-                      <p class="text-pulau__item">Senjata  {{ $suku->senjata }}</p>
-                    </li>
-                  </ul>
-                </div>
-  
-                <!-- default location -->
-              </section>
-            </article>
-          </div>
-          <hr>
-          <div data-aos="fade-up">
-            <article>
-              <div class="feedback mt-5">
-                <div class="feedback-description">
-                  <h2>Feedback</h2>
-                  <p class="mb-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nobis, maxime sequi similique a, expedita enim doloribus,
-                    eveniet pariatur dignissimos deserunt incidunt officia
-                    quisquam? Culpa nam similique praesentium cumque temporibus.
-                    Rem?
-                  </p>
-                </div>
-                <div class="feedback-form">
-                  <form method="POST">
-                    <div class="mb-3">
-                      <label for="nameFeedback" class="form-label">Nama</label>
+      <main>
+        <div data-aos="fade-down">
+          @foreach ($suku as $suku)
+            
+          <article>
+            <h2>Suku {{ $suku->suku }}</h2>
+              
+              <img
+                src="{{ asset('storage/gambar/suku/' . $suku->gambar) }}"
+                alt=""
+                class="image-suku" />
+            <p class="text-suku">
+              {{ $suku->deskripsi }} Dan Bahasa yang di gunakan oleh Suku {{ $suku->suku }} adalah Bahasa {{ $suku->bahasa }}
+            </p>
+          </article>
+          @endforeach
+        </div>
+        <div data-aos="fade-right">
+          <article>
+            <h3>Adat Istiadat</h3>
+            <section
+              class="splide"
+              aria-label="Placeholder Example"
+              id="splide1">
+              <ul class="splide__pagination"></ul>
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="overlay-pulau"></div>
+                    <img
+                      src="{{ asset('storage/gambar/pakaian/' . $suku->gambar_pakaian_adat) }}"
+                      alt="" />
+                    <p class="text-pulau__item">Pakaian {{ $suku->pakaian_adat }}</p>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="overlay-pulau"></div>
+                    <img
+                      src="{{ asset('storage/gambar/rumah/' . $suku->gambar_rumah_adat) }}"
+                      alt="" />
+                    <p class="text-pulau__item">Rumah {{ $suku->rumah_adat }}</p>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="overlay-pulau"></div>
+                    <img
+                      src="{{ asset('storage/gambar/seni/' . $suku->gambar_seni) }}"
+                      alt="" />
+                    <p class="text-pulau__item">Kesenian {{ $suku->seni }}</p>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="overlay-pulau"></div>
+                    <img
+                      src="{{ asset('storage/gambar/senjata/' . $suku->gambar_senjata) }}"
+                      alt="" />
+                    <p class="text-pulau__item">Senjata  {{ $suku->senjata }}</p>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- default location -->
+            </section>
+          </article>
+        </div>
+        <hr>
+        <div data-aos="fade-up">
+          <article>
+            <div class="feedback mt-5">
+              <div class="feedback-description">
+                <h2>Feedback</h2>
+                <p class="mb-3">
+                  Kami mengharapkan kritik dan saran kepada user agar Kami selaku developer dapat terus mengembangkan aplikasi ini untuk kepentinggan yang berkelanjutan Thanks :)
+                </p>
+              </div>
+              <div class="feedback-form">
+                <form id="feedback-form">
+                  <div class="mb-3">
+                    <label for="nameFeedback" class="form-label">Nama</label>
+                    <input
+                      type="name"
+                      name="name"
+                      class="form-control"
+                      id="nameFeedback"
+                      required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="feedbackComment" class="form-label"
+                      >Feedback</label
+                    >
+                    <textarea name="feedback" class="form-control"></textarea>
+                  </div>
+                  <div class="feedback-verified">
+                    <div class="form-check">
                       <input
-                        type="name"
-                        name="name"
-                        class="form-control"
-                        id="nameFeedback"
-                        required />
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault" />
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Jadikan sebagai anonim
+                      </label>
                     </div>
-                    <div class="mb-3">
-                      <label for="feedbackComment" class="form-label"
-                        >Feedback</label
-                      >
-                      <textarea name="feedback" class="form-control"></textarea>
+                    <div class="mt-5">
+                      <button type="submit" class="feedback-submit" id="submit-feedback">
+                        Kirim
+                      </button>
                     </div>
-                    <div class="feedback-verified">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault" />
-                        <label class="form-check-label" for="flexCheckDefault">
-                          Jadikan sebagai anonim
-                        </label>
-                      </div>
-                      <div class="mt-5">
-                        <button type="submit" class="feedback-submit">
-                          Kirim
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+                  </div>
+                </form>
               </div>
-              <div class="feedback-item mt-5">
-                <div class="feedback-card">
-                  <p>Nama : Raden</p>
-                  <p>Feedback : untuk informasinya cukup jelas</p>
-                </div>
-                <div class="feedback-card">
-                  <p>Nama : Anonim</p>
-                  <p>
-                    Feedback : Informasi masih ada yang kurang dibagian adat
-                    istiadat
-                  </p>
-                </div>
-                <div class="feedback-card">
-                  <p>Nama : Raden</p>
-                  <p>Feedback : untuk informasinya cukup jelas</p>
-                </div>
-                <div class="feedback-card">
-                  <p>Nama : Raden</p>
-                  <p>Feedback : untuk informasinya cukup jelas</p>
-                </div>
+            </div>
+            <div class="feedback-item mt-5">
+              <div class="feedback-card">
+                <p>Nama : Bayu</p>
+                <p>Feedback : untuk informasinya masi banyak yang harus di perbaiki</p>
               </div>
-            </article>
-          </div>
-        </main>
-        @endforeach
+              <div class="feedback-card">
+                <p>Nama : Anonim</p>
+                <p>
+                  Feedback : Informasi masih ada yang kurang dibagian adat
+                  istiadat
+                </p>
+              </div>
+              <div class="feedback-card">
+                <p>Nama : Iza</p>
+                <p>Feedback : untuk informasinya cukup jelas</p>
+              </div>
+              <div class="feedback-card">
+                <p>Nama : Raden</p>
+                <p>Feedback : untuk informasinya cukup jelas</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </main>
     </div>
     <div class="container-fluid">
       @include('layouts.footer')
     </div>
+    
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         var elms = document.getElementsByClassName('splide');
@@ -188,6 +180,40 @@
       });
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+    <script>
+      const submitFeedbackButton = document.getElementById('submit-feedback');
+
+      submitFeedbackButton.addEventListener('click', (event) => {
+        // Validasi formulir
+        event.preventDefault();
+        const form = document.getElementById('feedback-form');
+        if (!form.checkValidity()) {
+          event.stopPropagation();
+          Swal.fire({
+            title: 'Terjadi kesalahan!',
+            text: 'Silakan periksa kembali formulir Anda.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+          });
+          return;
+        }
+
+        // Kirim data formulir
+        // ...
+
+        // Tampilkan sweetalert2
+        Swal.fire({
+          title: 'Feedback Terkirim!',
+          text: 'Terima kasih atas feedback Anda!',
+          icon: 'success',
+          confirmButtonText: 'OK',
+        }).then(() => {
+          // Reset form
+          form.reset();
+        });
+      });
+    </script>
     <script>
       AOS.init();
     </script>
