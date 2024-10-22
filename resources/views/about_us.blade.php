@@ -61,7 +61,7 @@
                   src="{{ asset('build/assets/images/Raden.jpg') }}"
                   alt="" />
                 <div class="about-us__body">
-                  <p>Raden Akbar Agung Gumilang</p>
+                  <p>Raden Akbar</p>
                   <p>Front-End Developer</p>
                 </div>
               </div>
